@@ -1,0 +1,28 @@
+mod common {
+    pub struct ThemeMap {
+        pub dark_bg: bool,
+        pub fg1: String,
+        pub fg2: String,
+        pub bg1: String,
+        pub bg01: String,
+        pub bg2: String,
+        pub bg3: String,
+        pub bg4: String,
+        pub builtin: String,
+        pub keyword: String,
+        pub constant: String,
+        pub comment: String,
+        pub func: String,
+        pub typeface: String,
+        pub string: String,
+        pub warning: String,
+        pub warning2: String,
+        pub invbuiltin: String,
+        pub invkeyword: String,
+        pub invtype: String,
+        pub invfunc: String,
+        pub invstring: String,
+        pub invwarning: String,
+        pub invwarning2: String,
+    }
+}
