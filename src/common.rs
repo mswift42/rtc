@@ -41,21 +41,21 @@ impl FromStr for ThemeColor {
     type Err = std::num::ParseIntError;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
-        let mut factor = 1.0 / 255.0;
-        let mut r: u8 = u8::from_str_radix(&hex_code[1..3], 16)?;
-        let mut g: u8 = u8::from_str_radix(&hex_code[3..5], 16)?;
-        let mut b: u8 = u8::from_str_radix(&hex_code[5..7], 16)?;
+        let (red, green, blue, factor) = if hex_code.len() == 7 {
+            (u8::from_str_radix(&hex_code[1..3], 16)?,
+             u8::from_str_radix(&hex_code[3..5], 16)?,
+             u8::from_str_radix(&hex_code[5..7], 16)?,
+             1.0 / 255.0)
+        } else {
+            (u8::from_str_radix(&&hex_code[1..2], 16)?,
+             u8::from_str_radix(&hex_code[2..3], 16)?,
+             u8::from_str_radix(&hex_code[3..4], 16)?,
+             1.0 / 15.0)
+        };
 
-        if hex_code.len() == 4 {
-            factor = 1.0 / 15.0;
-            r = u8::from_str_radix(&hex_code[1..2], 8)?;
-            g = u8::from_str_radix(&hex_code[2..3], 8)?;
-            b = u8::from_str_radix(&hex_code[3..4], 8)?;
-        }
-
-        let col = Srgb::new(r as f32 * factor,
-                            g as f32 * factor,
-                            b as f32 * factor);
+        let col = Srgb::new(red as f32 * factor,
+                            green as f32 * factor,
+                            blue as f32 * factor);
 
         Ok(ThemeColor { col })
     }
@@ -84,5 +84,8 @@ mod test {
         let hex = "#gggggg";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_err());
+        let hex = "#fff";
+        let tc = ThemeColor::from_str(hex);
+        assert!(tc.is_ok());
     }
 }
