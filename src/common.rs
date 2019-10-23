@@ -1,5 +1,6 @@
-use palette::Srgb;
+use palette::{Srgb, Component};
 use std::str::FromStr;
+use palette::rgb::{Rgb, RgbStandard};
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -61,6 +62,29 @@ impl FromStr for ThemeColor {
     }
 }
 
+//impl<S, T> FromStr for Rgb<S,T>
+//where
+//    S: RgbStandard,
+//    T: Component,
+//{
+//   type Err = std::num::ParseIntError;
+//
+//    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
+//        let (red, green, blue, factor) = if hex_code.len() == 7 {
+//            (u8::from_str_radix(&hex_code[1..3], 16)?,
+//             u8::from_str_radix(&hex_code[3..5], 16)?,
+//             u8::from_str_radix(&hex_code[5..7], 16)?,
+//             1.0 / 255.0)
+//        } else {
+//            (u8::from_str_radix(&&hex_code[1..2], 16)?,
+//             u8::from_str_radix(&hex_code[2..3], 16)?,
+//             u8::from_str_radix(&hex_code[3..4], 16)?,
+//             1.0 / 15.0)
+//        };
+//
+//    }
+//}
+//
 
 #[cfg(test)]
 mod test {
@@ -87,5 +111,16 @@ mod test {
         let hex = "#fff";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
+        let col = tc.unwrap().col;
+        assert_eq!(col.red, 1.0);
+        assert_eq!(col.green, 1.0);
+        assert_eq!(col.blue, 1.0);
+        let hex = "#abc";
+        let tc = ThemeColor::from_str(hex);
+        let col = tc.unwrap().col;
+        let (r,g,b) = (col.red, col.green, col.blue);
+        approx::ulps_eq!(r, 0.6667, max_ulps = 4);
+        approx::ulps_eq!(g, 0.7333, max_ulps = 4);
+        approx::ulps_eq!(b, 0.8, max_ulps = 4);
     }
 }
