@@ -42,21 +42,17 @@ impl FromStr for ThemeColor {
     type Err = std::num::ParseIntError;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
-        let (red, green, blue, factor) = if hex_code.len() == 7 {
+        let (red, green, blue, ) = if hex_code.len() == 7 {
             (u8::from_str_radix(&hex_code[1..3], 16)?,
              u8::from_str_radix(&hex_code[3..5], 16)?,
-             u8::from_str_radix(&hex_code[5..7], 16)?,
-             1.0 / 255.0)
+             u8::from_str_radix(&hex_code[5..7], 16)?)
         } else {
             (u8::from_str_radix(&&hex_code[1..2], 16)?,
              u8::from_str_radix(&hex_code[2..3], 16)?,
-             u8::from_str_radix(&hex_code[3..4], 16)?,
-             1.0 / 15.0)
+             u8::from_str_radix(&hex_code[3..4], 16)?)
         };
 
-        let col = Srgb::new(red as f32 * factor,
-                            green as f32 * factor,
-                            blue as f32 * factor);
+        let col = Srgb::new(red, green, blue);
 
         Ok(ThemeColor { col })
     }
@@ -96,15 +92,15 @@ mod test {
         let tc = ThemeColor::from_str("#ffffff");
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
-        assert_eq!(col.red, 1.0);
-        assert_eq!(col.green, 1.0);
-        assert_eq!(col.blue, 1.0);
+        assert_eq!(col.red, 255);
+        assert_eq!(col.green, 255);
+        assert_eq!(col.blue, 255);
         let hex = "#000000";
         let tc = ThemeColor::from_str("#000000");
         let col = tc.unwrap().col;
-        assert_eq!(col.red, 0.0);
-        assert_eq!(col.green, 0.0);
-        assert_eq!(col.blue, 0.0);
+        assert_eq!(col.red, 0);
+        assert_eq!(col.green, 0);
+        assert_eq!(col.blue, 0);
         let hex = "#gggggg";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_err());
@@ -112,15 +108,17 @@ mod test {
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
-        assert_eq!(col.red, 1.0);
-        assert_eq!(col.green, 1.0);
-        assert_eq!(col.blue, 1.0);
+        assert_eq!(col.red, 255);
+        assert_eq!(col.green, 255);
+        assert_eq!(col.blue, 255);
         let hex = "#abc";
         let tc = ThemeColor::from_str(hex);
         let col = tc.unwrap().col;
-        let (r,g,b) = (col.red, col.green, col.blue);
-        approx::ulps_eq!(r, 0.6667, max_ulps = 4);
-        approx::ulps_eq!(g, 0.7333, max_ulps = 4);
-        approx::ulps_eq!(b, 0.8, max_ulps = 4);
+        let (r, g, b) = (col.red, col.green, col.blue);
+        assert_eq!(r, 170);
+        assert_eq!(g, 187);
+        assert_eq!(b, 204);
+        let hx = format!("{:x}", col);
+        assert_eq!(hx, hex);
     }
 }
