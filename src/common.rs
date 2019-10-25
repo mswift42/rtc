@@ -4,33 +4,33 @@ use palette::rgb::{Rgb, RgbStandard};
 
 pub struct ThemeMap {
     pub dark_bg: bool,
-    pub fg1: Srgb,
-    pub fg2: Srgb,
-    pub bg1: Srgb,
-    pub bg01: Srgb,
-    pub bg2: Srgb,
-    pub bg3: Srgb,
-    pub bg4: Srgb,
-    pub builtin: Srgb,
-    pub keyword: Srgb,
-    pub constant: Srgb,
-    pub comment: Srgb,
-    pub func: Srgb,
-    pub typeface: Srgb,
-    pub string: Srgb,
-    pub warning: Srgb,
-    pub warning2: Srgb,
-    pub invbuiltin: Srgb,
-    pub invkeyword: Srgb,
-    pub invtype: Srgb,
-    pub invfunc: Srgb,
-    pub invstring: Srgb,
-    pub invwarning: Srgb,
-    pub invwarning2: Srgb,
+    pub fg1: ThemeColor,
+    pub fg2: ThemeColor,
+    pub bg1: ThemeColor,
+    pub bg01: ThemeColor,
+    pub bg2: ThemeColor,
+    pub bg3: ThemeColor,
+    pub bg4: ThemeColor,
+    pub builtin: ThemeColor,
+    pub keyword: ThemeColor,
+    pub constant: ThemeColor,
+    pub comment: ThemeColor,
+    pub func: ThemeColor,
+    pub typeface: ThemeColor,
+    pub string: ThemeColor,
+    pub warning: ThemeColor,
+    pub warning2: ThemeColor,
+    pub invbuiltin: ThemeColor,
+    pub invkeyword: ThemeColor,
+    pub invtype: ThemeColor,
+    pub invfunc: ThemeColor,
+    pub invstring: ThemeColor,
+    pub invwarning: ThemeColor,
+    pub invwarning2: ThemeColor,
 }
 
 pub struct ThemeColor {
-    pub col: Srgb,
+    pub col: Rgb<Srgb>,
 }
 
 impl ThemeColor {
@@ -52,7 +52,7 @@ impl FromStr for ThemeColor {
              u8::from_str_radix(&hex_code[3..4], 16)?)
         };
 
-        let col = Srgb::new(red, green, blue);
+        let col= Rgb::<Srgb,u8>::new(red, green, blue);
 
         Ok(ThemeColor { col })
     }
