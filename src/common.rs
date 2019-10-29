@@ -40,6 +40,43 @@ impl ThemeColor {
 //    }
 }
 
+pub struct RgbColor {
+    pub col: Srgb,
+}
+
+impl FromStr for RgbColor {
+    type Err = std::num::ParseIntError;
+
+    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
+        match hex_code.len() {
+            4 | 7 => {
+                let (red, green, blue, factor) = if hex_code.len() == 7 {
+                    (u8::from_str_radix(&hex_code[1..3], 16)?,
+                     u8::from_str_radix(&hex_code[3..5], 16)?,
+                     u8::from_str_radix(&hex_code[5..7], 16)?,
+                     1.0 / 255.0
+                    )
+                } else {
+                    (u8::from_str_radix(&&hex_code[1..2], 16)?,
+                     u8::from_str_radix(&hex_code[2..3], 16)?,
+                     u8::from_str_radix(&hex_code[3..4], 16)?,
+                     1.0 / 15.0
+                    )
+                };
+
+                let col = Srgb::new(
+                    red as f32 * factor,
+                    green as f32 * factor,
+                    blue as f32 * factor,
+                );
+
+                Ok(RgbColor { col })
+            },
+            _ => std::
+        }
+    }
+}
+
 impl FromStr for ThemeColor {
     type Err = std::num::ParseIntError;
 
