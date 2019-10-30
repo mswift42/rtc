@@ -105,6 +105,7 @@ impl FromStr for ThemeColor {
 #[cfg(test)]
 mod test {
     use super::*;
+    use std::fmt::Display;
 
     extern crate approx;
 
@@ -145,5 +146,10 @@ mod test {
         assert_eq!((b * 255.0).round() as u8, 51);
         let hex = "hello";
         assert!(ThemeColor::from_str(hex).is_err());
+        assert!(ThemeColor::from_str("#ff").is_err());
+        assert!(ThemeColor::from_str("").is_err());
+        assert!(ThemeColor::from_str("ffffff").is_err());
+        assert!(ThemeColor::from_str("#0000000").is_err());
+
     }
 }
