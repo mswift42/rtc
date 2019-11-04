@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Color Theme {{themename}}, created by {{themeauthor}} .
+<!-- Color Theme {{.Themename}}, created by {{.Author}} .
 Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 <plist version="1.0">
 <dict>
 	<key>author</key>
-	<string>{{themeauthor}}</string>
+	<string>{{.Author}}</string>
 	<key>name</key>
-	<string>{{themename}}</string>
+	<string>{{.Themename}}</string>
 	<key>settings</key>
 	<array>
 		<dict>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{mainbg}}</string>
+				<string>{{.Bg1}}</string>
 				<key>caret</key>
-				<string>{{bg3}}</string>
+				<string>{{.Bg3}}</string>
 				<key>foreground</key>
-				<string>{{mainfg}}</string>
+				<string>{{.Fg1}}</string>
 				<key>invisibles</key>
-				<string>{{bg3}}</string>
+				<string>{{.Bg3}}</string>
 				<key>lineHighlight</key>
-				<string>{{bg2}}</string>
+				<string>{{.Bg2}}</string>
 				<key>selection</key>
-				<string>{{bg3}}</string>
+				<string>{{.Bg3}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -35,7 +35,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{comment}}</string>
+				<string>{{.Comment}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -48,7 +48,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{fg3}}</string>
+				<string>{{.Constant}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -59,7 +59,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{variable}}</string>
+				<string>{{.Variable}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -72,7 +72,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{constant}}</string>
+				<string>{{.Constant}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -85,7 +85,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{type}}</string>
+				<string>{{.Type}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -98,7 +98,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{string}}</string>
+				<string>{{.String}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -109,7 +109,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{keyword}}</string>
+				<string>{{.Keyword}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -122,7 +122,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{functionname}}</string>
+				<string>{{.Func}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -135,7 +135,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>{{keyword}}</string>
+				<string>{{.Keyword}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -146,11 +146,11 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{variable}}</string>
+				<string>{{.InvWarning}}</string>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{mainfg}}</string>
+				<string>{{.Fg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -161,7 +161,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{mainfg}}</string>
+				<string>{{.Fg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -172,11 +172,11 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{builtin}}</string>
+				<string>{{.Builtin}}</string>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{mainbg}}</string>
+				<string>{{.Bg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -187,7 +187,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{mainbg}}</string>
+				<string>{{.Bg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -198,7 +198,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{string}}</string>
+				<string>{{.String}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -209,7 +209,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{variable}}</string>
+				<string>{{.Variable}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -220,9 +220,9 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{mainbg}}</string>
+				<string>{{.Bg1}}</string>
 				<key>background</key>
-				<string>{{functionname}}</string>
+				<string>{{.Func}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -235,7 +235,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>{{keyword}}</string>
+				<string>{{.Keyword}}</string>
 			</dict>
 		</dict>
 	</array>

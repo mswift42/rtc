@@ -1,8 +1,8 @@
-;;; {{themename}}-theme.el --- Theme 
+;; {{.Themename}}-theme.el --- Theme
 
-;; Copyright (C) 2016 , {{themeauthor}}
+;; Copyright (C) 2016 , {{.Author}}
 
-;; Author: {{themeauthor}}
+;; Author: {{.Themeauthor}}
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24"))
 ;; Created with ThemeCreator, https://github.com/mswift42/themecreator.
@@ -27,26 +27,26 @@
 
 ;;; Code:
 
- (deftheme {{themename}})
+ (deftheme {{.Themename}})
  (let ((class '((class color) (min-colors 89)))
-       (fg1 "{{mainfg}}")
-       (fg2 "{{fg2}}")
-       (fg3 "{{fg3}}")
-       (fg4 "{{fg4}}")
-       (bg1 "{{mainbg}}")
-       (bg2 "{{bg2}}")
-       (bg3 "{{bg3}}")
-       (bg4 "{{bg4}}")
-       (builtin "{{builtin}}")
-       (keyword "{{keyword}}")
-       (const   "{{constant}}")
-       (comment "{{comment}}")
-       (func    "{{functionname}}")
-       (str     "{{string}}")
-       (type    "{{type}}")
-       (var     "{{variable}}")
-       (warning "{{warning}}")
-       (warning2 "{{warning2}}"))
+       (fg1 "{{.Fg1}}")
+       (fg2 "{{.Fg2}}")
+       (fg3 "{{.Fg3}}")
+       (fg4 "{{.Fg4}}")
+       (bg1 "{{.Bg1}}")
+       (bg2 "{{.Bg2}}")
+       (bg3 "{{.Bg3}}")
+       (bg4 "{{.Bg4}}")
+       (builtin "{{.Builtin}}")
+       (keyword "{{.Keyword}}")
+       (const   "{{.Constant}}")
+       (comment "{{.Comment}}")
+       (func    "{{.Func}}")
+       (str     "{{.String}}")
+       (type    "{{.Type}}")
+       (var     "{{.Variable}}")
+       (warning "{{.Warning}}")
+       (warning2 "{{.Warning2}}"))
    (custom-theme-set-faces
    '{{themename}}
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
@@ -246,10 +246,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme '{{themename}})
+(provide-theme '{{.Themename}})
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; {{themename}}-theme.el ends here
+;;; {{.Themename}}-theme.el ends here

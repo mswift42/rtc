@@ -1,6 +1,6 @@
 " Vim color file
-" {{themename}}
-" Created by {{themeauthor}} with ThemeCreator (https://github.com/mswift42/themecreator)
+" {{.Themename}}
+" Created by {{.Author}} with 
 
 hi clear
 
@@ -9,28 +9,28 @@ syntax reset
 endif
 
 set t_Co=256
-let g:colors_name = "{{themename}}"
+let g:colors_name = "{{.Themename}}"
 
 
 " Define reusable colorvariables.
-let s:bg="{{mainbg}}"
-let s:fg="{{mainfg}}"
-let s:fg2="{{fg2}}"
-let s:fg3="{{fg3}}"
-let s:fg4="{{fg4}}"
-let s:bg2="{{bg2}}"
-let s:bg3="{{bg3}}"
-let s:bg4="{{bg4}}"
-let s:keyword="{{keyword}}"
-let s:builtin="{{builtin}}"
-let s:const= "{{constant}}"
-let s:comment="{{comment}}"
-let s:func="{{functionname}}"
-let s:str="{{string}}"
-let s:type="{{type}}"
-let s:var="{{variable}}"
-let s:warning="{{warning}}"
-let s:warning2="{{warning2}}"
+let s:bg="{{.Bg1}}"
+let s:fg="{{.Fg1}}"
+let s:fg2="{{.Fg2}}"
+let s:fg3="{{.Fg3}}"
+let s:fg4="{{.Fg4}}"
+let s:bg2="{{.Bg2}}"
+let s:bg3="{{.Bg3}}"
+let s:bg4="{{.Bg4}}"
+let s:keyword="{{.Keyword}}"
+let s:builtin="{{.Builtin}}"
+let s:const= "{{.Constant}}"
+let s:comment="{{.Comment}}"
+let s:func="{{.Func}}"
+let s:str="{{.String}}"
+let s:type="{{.Type}}"
+let s:var="{{.Variable}}"
+let s:warning="{{.Warning}}"
+let s:warning2="{{.Warning2}}"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg 
 exe 'hi Cursor guifg='s:bg' guibg='s:fg 
