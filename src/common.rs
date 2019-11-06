@@ -1,6 +1,7 @@
 use palette::{Srgb, Component};
 use std::str::FromStr;
 use palette::rgb::{Rgb, RgbStandard};
+use palette::Lab;
 use std::num::ParseIntError;
 use std::error::Error;
 
@@ -36,8 +37,10 @@ pub struct ThemeColor {
 }
 
 impl ThemeColor {
-//    pub fn from_hex(scol: String) -> ThemeColor {
-//    }
+    pub fn is_dark_bg(tc: Self) -> bool {
+        let (l, _, _) = Lab::From(tc.col).into_components();
+        l < 0.5
+    }
 }
 
 pub struct RgbColor {
@@ -64,7 +67,7 @@ impl FromStr for ThemeColor {
                     )
                 };
 
-                let col = Srgb::new(
+                let col = Rgb::new(
                     red as f32 * factor,
                     green as f32 * factor,
                     blue as f32 * factor,
