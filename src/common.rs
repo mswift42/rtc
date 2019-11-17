@@ -37,8 +37,8 @@ pub struct ThemeColor {
 }
 
 impl ThemeColor {
-    pub fn is_dark_bg(tc: Self) -> bool {
-        let (l, _, _) = Lab::From(tc.col).into_components();
+    pub fn is_dark_bg(&self) -> bool {
+        let (l, _, _): (f32, f32, f32) = Lab::from(self.col.into_format()).into_components();
         l < 0.5
     }
 }
