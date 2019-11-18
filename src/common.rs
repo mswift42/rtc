@@ -128,4 +128,14 @@ mod test {
         assert!(ThemeColor::from_str("ffffff").is_err());
         assert!(ThemeColor::from_str("#0000000").is_err());
     }
+
+    #[test]
+    fn is_dark_bg() {
+        let tc = ThemeColor::from_str("#ffffff");
+        assert_eq!(tc.unwrap().is_dark_bg(), false);
+        let tc = ThemeColor::from_str("#000000");
+        assert_eq!(tc.unwrap().is_dark_bg(), true);
+        let tc = ThemeColor::from_str("#002b36");
+        assert_eq!(tc.unwrap().is_dark_bg(), true);
+    }
 }
