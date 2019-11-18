@@ -1,9 +1,9 @@
-use palette::{Srgb, Component};
-use std::str::FromStr;
 use palette::rgb::{Rgb, RgbStandard};
 use palette::Lab;
-use std::num::ParseIntError;
+use palette::{Component, Srgb};
 use std::error::Error;
+use std::num::ParseIntError;
+use std::str::FromStr;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -38,7 +38,7 @@ pub struct ThemeColor {
 
 impl ThemeColor {
     pub fn is_dark_bg(&self) -> bool {
-        let (l, _, _): (f32, f32, f32) = Lab::from(self.col.into_format()).into_components();
+        let (l, _, _): (f32, f32, f32) = Lab::from(self.col).into_components();
         l < 0.5
     }
 }
@@ -54,16 +54,18 @@ impl FromStr for ThemeColor {
         match hex_code.len() {
             4 | 7 => {
                 let (red, green, blue, factor) = if hex_code.len() == 7 {
-                    (u8::from_str_radix(&hex_code[1..3], 16)?,
-                     u8::from_str_radix(&hex_code[3..5], 16)?,
-                     u8::from_str_radix(&hex_code[5..7], 16)?,
-                     1.0 / 255.0
+                    (
+                        u8::from_str_radix(&hex_code[1..3], 16)?,
+                        u8::from_str_radix(&hex_code[3..5], 16)?,
+                        u8::from_str_radix(&hex_code[5..7], 16)?,
+                        1.0 / 255.0,
                     )
                 } else {
-                    (u8::from_str_radix(&&hex_code[1..2], 16)?,
-                     u8::from_str_radix(&hex_code[2..3], 16)?,
-                     u8::from_str_radix(&hex_code[3..4], 16)?,
-                     1.0 / 15.0
+                    (
+                        u8::from_str_radix(&&hex_code[1..2], 16)?,
+                        u8::from_str_radix(&hex_code[2..3], 16)?,
+                        u8::from_str_radix(&hex_code[3..4], 16)?,
+                        1.0 / 15.0,
                     )
                 };
 
@@ -75,53 +77,25 @@ impl FromStr for ThemeColor {
 
                 Ok(ThemeColor { col })
             }
-            _ => Err("invalid hex_code length".into())
+            _ => Err("invalid hex_code length".into()),
         }
     }
 }
 
-
-//impl<S, T> FromStr for Rgb<S,T>
-//where
-//    S: RgbStandard,
-//    T: Component,
-//{
-//   type Err = std::num::ParseIntError;
-//
-//    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
-//        let (red, green, blue, factor) = if hex_code.len() == 7 {
-//            (u8::from_str_radix(&hex_code[1..3], 16)?,
-//             u8::from_str_radix(&hex_code[3..5], 16)?,
-//             u8::from_str_radix(&hex_code[5..7], 16)?,
-//             1.0 / 255.0)
-//        } else {
-//            (u8::from_str_radix(&&hex_code[1..2], 16)?,
-//             u8::from_str_radix(&hex_code[2..3], 16)?,
-//             u8::from_str_radix(&hex_code[3..4], 16)?,
-//             1.0 / 15.0)
-//        };
-//
-//    }
-//}
-//
-
 #[cfg(test)]
 mod test {
     use super::*;
-    use std::fmt::Display;
 
     extern crate approx;
 
     #[test]
     fn from_str() {
-        let hex = "#ffffff";
         let tc = ThemeColor::from_str("#ffffff");
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
         assert_eq!(col.red, 1.0);
         assert_eq!(col.green, 1.0);
         assert_eq!(col.blue, 1.0);
-        let hex = "#000000";
         let tc = ThemeColor::from_str("#000000");
         let col = tc.unwrap().col;
         assert_eq!(col.red, 0.0);
@@ -153,6 +127,5 @@ mod test {
         assert!(ThemeColor::from_str("").is_err());
         assert!(ThemeColor::from_str("ffffff").is_err());
         assert!(ThemeColor::from_str("#0000000").is_err());
-
     }
 }
