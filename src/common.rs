@@ -1,6 +1,6 @@
 use palette::rgb::{Rgb, RgbStandard};
 use palette::Lab;
-use palette::{Component, Srgb};
+use palette::{Component, Srgb, Shade,  LinSrgb};
 use std::error::Error;
 use std::num::ParseIntError;
 use std::str::FromStr;
@@ -40,6 +40,16 @@ impl ThemeColor {
     pub fn is_dark_bg(&self) -> bool {
         let (l, _, _): (f32, f32, f32) = Lab::from(self.col).into_components();
         l < 50.0
+    }
+
+    pub fn lighten(&self) -> ThemeColor {
+        let lcol= self.col.into_linear().lighten(0.1);
+        ThemeColor{col: Rgb::from_linear(lcol)}
+    }
+
+    pub fn darken(&self) -> ThemeColor {
+        let dcol = self.col.into_linear().darken(0.1);
+        ThemeColor{col: Rgb::from_linear(dcol)}
     }
 }
 
