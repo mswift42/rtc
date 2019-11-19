@@ -39,7 +39,7 @@ pub struct ThemeColor {
 impl ThemeColor {
     pub fn is_dark_bg(&self) -> bool {
         let (l, _, _): (f32, f32, f32) = Lab::from(self.col).into_components();
-        l < 0.5
+        l < 50.0
     }
 }
 
@@ -137,5 +137,17 @@ mod test {
         assert_eq!(tc.unwrap().is_dark_bg(), true);
         let tc = ThemeColor::from_str("#002b36");
         assert_eq!(tc.unwrap().is_dark_bg(), true);
+        let tc = ThemeColor::from_str("#506e75");
+        assert_eq!(tc.unwrap().is_dark_bg(), true);
+        let tc = ThemeColor::from_str("#fdf6e3");
+        assert_eq!(tc.unwrap().is_dark_bg(), false);
+        let tc = ThemeColor::from_str("#d2d2d2");
+        assert_eq!(tc.unwrap().is_dark_bg(), false);
+        let tc = ThemeColor::from_str("#932ad7");
+        assert_eq!(tc.unwrap().is_dark_bg(), true);
+        let tc = ThemeColor::from_str("#87e37e");
+        assert_eq!(tc.unwrap().is_dark_bg(), false);
+        let tc = ThemeColor::from_str("#39c52b");
+        assert_eq!(tc.unwrap().is_dark_bg(), false);
     }
 }
