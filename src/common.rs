@@ -1,6 +1,6 @@
 use palette::rgb::{Rgb, RgbStandard};
 use palette::Lab;
-use palette::{Component, Srgb, Shade,  LinSrgb};
+use palette::{Component, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use std::num::ParseIntError;
 use std::str::FromStr;
@@ -43,13 +43,21 @@ impl ThemeColor {
     }
 
     pub fn lighten(&self) -> ThemeColor {
-        let lcol= self.col.into_linear().lighten(0.1);
-        ThemeColor{col: Rgb::from_linear(lcol)}
+        let lcol = self.col.into_linear().lighten(0.1);
+        ThemeColor {
+            col: Rgb::from_linear(lcol),
+        }
     }
 
     pub fn darken(&self) -> ThemeColor {
         let dcol = self.col.into_linear().darken(0.1);
-        ThemeColor{col: Rgb::from_linear(dcol)}
+        ThemeColor {
+            col: Rgb::from_linear(dcol),
+        }
+    }
+
+    pub fn to_hex(&self) -> String {
+        format!("#:X", self.col)
     }
 }
 
@@ -159,5 +167,12 @@ mod test {
         assert_eq!(tc.unwrap().is_dark_bg(), false);
         let tc = ThemeColor::from_str("#39c52b");
         assert_eq!(tc.unwrap().is_dark_bg(), false);
+    }
+
+    #[test]
+    fn lighten() {
+        let tc = ThemeColor::from_str("#000000");
+        let lighten = tc.unwrap().lighten();
+        assert_eq!(format!("#:X", lighten.col), "111111");
     }
 }
