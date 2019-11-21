@@ -1,6 +1,5 @@
 use palette::rgb::{Rgb, RgbStandard};
-use palette::Lab;
-use palette::{Component, LinSrgb, Shade, Srgb};
+use palette::{Lab, Component, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use std::num::ParseIntError;
 use std::str::FromStr;
@@ -57,7 +56,11 @@ impl ThemeColor {
     }
 
     pub fn to_hex(&self) -> String {
-        format!("#:X", self.col)
+        let (r, g, b) = self.col.into_components();
+        let c = Rgb::<Srgb, u8>::new((r * 255.0) as u8,
+                         (g * 255.0) as u8,
+                         (b * 255.0) as u8);
+        format!("#{:X}", c)
     }
 }
 
@@ -173,6 +176,6 @@ mod test {
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
         let lighten = tc.unwrap().lighten();
-        assert_eq!(format!("#:X", lighten.col), "111111");
+        assert_eq!(lighten.to_hex(), "#111111".to_string());
     }
 }
