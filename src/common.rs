@@ -64,9 +64,6 @@ impl ThemeColor {
     }
 }
 
-pub struct RgbColor {
-    pub col: Srgb,
-}
 
 impl FromStr for ThemeColor {
     type Err = Box<dyn std::error::Error>;
