@@ -41,15 +41,15 @@ impl ThemeColor {
         l < 50.0
     }
 
-    pub fn lighten(&self) -> ThemeColor {
-        let lcol = self.col.into_linear().lighten(0.1);
+    pub fn lighten(&self, factor: f32) -> ThemeColor {
+        let lcol = self.col.into_linear().lighten(factor);
         ThemeColor {
             col: Rgb::from_linear(lcol),
         }
     }
 
-    pub fn darken(&self) -> ThemeColor {
-        let dcol = self.col.into_linear().darken(0.1);
+    pub fn darken(&self, factor: f32) -> ThemeColor {
+        let dcol = self.col.into_linear().darken(factor);
         ThemeColor {
             col: Rgb::from_linear(dcol),
         }
@@ -173,7 +173,7 @@ mod test {
     #[test]
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
-        let lighten = tc.unwrap().lighten();
+        let lighten = tc.unwrap().lighten(0.008);
         assert_eq!(lighten.to_hex(), "#111111".to_string());
     }
 }
