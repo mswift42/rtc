@@ -171,6 +171,16 @@ mod test {
     }
 
     #[test]
+    fn to_hex() {
+        let tc = ThemeColor::from_str("#000000");
+        assert_eq!(tc.unwrap().to_hex(), "#000000");
+        let tc = ThemeColor::from_str("#ffffff");
+        assert_eq!(tc.unwrap().to_hex(), "#ffffff");
+        let tc = ThemeColor::from_str("#abc123");
+        assert_eq!(tc.unwrap().to_hex(), "#abc123");
+    }
+
+    #[test]
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
         let lighten = tc.unwrap().lighten(0.008);
