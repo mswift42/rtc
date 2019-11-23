@@ -178,6 +178,14 @@ mod test {
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#abc123");
         assert_eq!(tc.unwrap().to_hex(), "#abc123");
+        let c = Srgb::new(1.0, 1.0, 1.0);
+        assert_eq!(ThemeColor{col: c}.to_hex(), "#ffffff");
+        let c = Srgb::new(0.0, 0.0, 0.0);
+        assert_eq!(ThemeColor{col: c}.to_hex(), "#000000");
+        let c = Srgb::new(0.22, 0.188, 0.114);
+        assert_eq!(ThemeColor{col: c}.to_hex(), "#38301d");
+        let tc = ThemeColor::from_str("#abc");
+        assert_eq!(tc.unwrap().to_hex(), "#aabbcc");
     }
 
     #[test]
