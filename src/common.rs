@@ -61,7 +61,7 @@ impl ThemeColor {
                          (g * 255.0 + 0.5) as u8,
                          (b * 255.0 + 0.5) as u8);
         let c = Srgb::new(r,g,b);
-        format!("#{:X}", c)
+        format!("#{:x}", c)
     }
 }
 
@@ -174,6 +174,9 @@ mod test {
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
         let lighten = tc.unwrap().lighten(0.008);
-        assert_eq!(lighten.to_hex(), "#111111".to_string());
+        assert_eq!(lighten.to_hex(), "#161616".to_string());
+        let tc = ThemeColor::from_str("#ffffff");
+        let darken = tc.unwrap().darken(0.008);
+        assert_eq!(darken.to_hex(), "#fefefe".to_string());
     }
 }
