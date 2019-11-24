@@ -42,16 +42,18 @@ impl ThemeColor {
     }
 
     pub fn lighten(&self, factor: f32) -> ThemeColor {
-        let lcol = self.col.into_linear().lighten(factor);
+        let l = Lab::from(self.col);
+        let lcol = l.lighten(factor);
         ThemeColor {
-            col: Rgb::from_linear(lcol),
+            col: Rgb::from(lcol),
         }
     }
 
     pub fn darken(&self, factor: f32) -> ThemeColor {
-        let dcol = self.col.into_linear().darken(factor);
+        let l = Lab::from(self.col);
+        let dcol = l.darken(factor);
         ThemeColor {
-            col: Rgb::from_linear(dcol),
+            col: Rgb::from(dcol),
         }
     }
 
