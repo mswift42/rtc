@@ -186,6 +186,16 @@ mod test {
         assert_eq!(ThemeColor{col: c}.to_hex(), "#38301d");
         let tc = ThemeColor::from_str("#abc");
         assert_eq!(tc.unwrap().to_hex(), "#aabbcc");
+        let col = Srgb::new(0.196, 0.66, 0.32);
+        assert_eq!(ThemeColor{col}.to_hex(), "#32a852");
+    }
+
+    #[test]
+    fn darken() {
+        let tc = ThemeColor::from_str("#ffffff");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#f3f3f3");
+        let tc = ThemeColor::from_str("#f3f3f3");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#e7e7e7");
     }
 
     #[test]
