@@ -195,18 +195,15 @@ mod test {
     #[test]
     fn darken() {
         let tc = ThemeColor::from_str("#ffffff");
-        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#f3f3f3");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#e2e2e2");
         let tc = ThemeColor::from_str("#f3f3f3");
-        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#e7e7e7");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#d7d7d7");
     }
 
     #[test]
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
-        let lighten = tc.unwrap().lighten(0.008);
-        assert_eq!(lighten.to_hex(), "#161616".to_string());
-        let tc = ThemeColor::from_str("#ffffff");
-        let darken = tc.unwrap().darken(0.008);
-        assert_eq!(darken.to_hex(), "#fefefe".to_string());
+        let lighten = tc.unwrap().lighten(0.1);
+        assert_eq!(lighten.to_hex(), "#1b1b1b".to_string());
     }
 }
