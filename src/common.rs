@@ -44,7 +44,7 @@ impl ThemeColor {
     pub fn lighten(&self, factor: f32) -> ThemeColor {
         let l = Lab::from(self.col);
         let lcol = l.lighten(factor);
-        ThemeColor {
+        ThemeColor{
             col: Rgb::from(lcol),
         }
     }
@@ -198,12 +198,19 @@ mod test {
         assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#e2e2e2");
         let tc = ThemeColor::from_str("#f3f3f3");
         assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#d7d7d7");
+        let tc = ThemeColor::from_str("#87e37e");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#6bc764");
+        let tc = ThemeColor::from_str("#fdf6e3");
+        assert_eq!(tc.unwrap().darken(0.1).to_hex(), "#e0dac7");
     }
 
     #[test]
     fn lighten() {
         let tc = ThemeColor::from_str("#000000");
         let lighten = tc.unwrap().lighten(0.1);
-        assert_eq!(lighten.to_hex(), "#1b1b1b".to_string());
+        assert_eq!(lighten.to_hex(), "#1b1b1b");
+        let tc = ThemeColor::from_str("#932ad7");
+        let lighten = tc.unwrap().lighten(0.1);
+        assert_eq!(lighten.to_hex(), "#b049f4");
     }
 }
