@@ -148,6 +148,14 @@ mod test {
         assert!(ThemeColor::from_str("").is_err());
         assert!(ThemeColor::from_str("ffffff").is_err());
         assert!(ThemeColor::from_str("#0000000").is_err());
+        let hex = "#123456";
+        let tc = ThemeColor::from_str(hex).unwrap();
+        assert_eq!((tc.col.red * 255.0).round() as u8 , 18);
+        assert_eq!((tc.col.green * 255.0).round() as u8, 52);
+        assert_eq!((tc.col.blue * 255.0).round() as u8, 86);
+        let  tc = ThemeColor::from_str("#fff");
+        assert_eq!(tc.unwrap().to_hex(), "#ffffff");
+
     }
 
     #[test]
