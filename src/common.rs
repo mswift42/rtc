@@ -114,21 +114,14 @@ mod test {
         let tc = ThemeColor::from_str("#ffffff");
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
-        assert_eq!(col.red, 1.0);
-        assert_eq!(col.green, 1.0);
-        assert_eq!(col.blue, 1.0);
+        assert_relative_eq!(col, Rgb::new(1.0, 1.0, 1.0));
         let tc = ThemeColor::from_str("#000000");
         let col = tc.unwrap().col;
-        assert_eq!(col.red, 0.0);
-        assert_eq!(col.green, 0.0);
-        assert_eq!(col.blue, 0.0);
+        assert_relative_eq!(col, Rgb::new(0.0, 0.0, 0.0));
         let hex = "#fff";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
-        let col = tc.unwrap().col;
-        assert_eq!(col.red, 1.0);
-        assert_eq!(col.green, 1.0);
-        assert_eq!(col.blue, 1.0);
+        assert_relative_eq!(tc.unwrap().col, Rgb::new(1.0, 1.0, 1.0));
         let hex = "#abc";
         let tc = ThemeColor::from_str(hex);
         let col = tc.unwrap().col;
@@ -155,6 +148,10 @@ mod test {
         assert_eq!((tc.col.blue * 255.0).round() as u8, 86);
         let  tc = ThemeColor::from_str("#fff");
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
+        let tc = ThemeColor::from_str("#ece3db");
+        assert_relative_eq!(tc.unwrap().col, Rgb::new(0.92549026, 0.89019614, 0.8588236));
+        let tc = ThemeColor::from_str("#3366cc");
+        assert_relative_eq!(tc.unwrap().col, Rgb::new(0.2, 0.4, 0.8));
 
     }
 
