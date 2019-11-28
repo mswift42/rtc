@@ -9,3 +9,5 @@ edition = "2018"
 [dependencies]
 palette = "0.5.0"
 approx = "0.3.2"
+pest = "2.1.2"
+pest-derive = "2.1.2"
