@@ -131,10 +131,10 @@ mod test {
         assert_eq!((b * 255.0).round() as u8, 204);
         let hex = "#123";
         let col = ThemeColor::from_str(hex).unwrap().col;
-        let (r, g, b) = (col.red, col.green, col.blue);
-        assert_eq!((r * 255.0).round() as u8, 17);
-        assert_eq!((g * 255.0).round() as u8, 34);
-        assert_eq!((b * 255.0).round() as u8, 51);
+        let (r, g, b) = ((col.red * 255.0).round() as u8, 
+        (col.green * 255.0).round() as u8, 
+        (col.blue * 255.0).round() as u8);
+        assert_eq!((r,g,b), (17, 34,51));
         let hex = "hello";
         assert!(ThemeColor::from_str(hex).is_err());
         assert!(ThemeColor::from_str("#ff").is_err());
