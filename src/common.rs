@@ -1,5 +1,5 @@
 use palette::rgb::{Rgb, RgbStandard};
-use palette::{Lab, Component, LinSrgb, Shade, Srgb};
+use palette::{Component, Lab, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use std::num::ParseIntError;
 use std::str::FromStr;
@@ -44,7 +44,7 @@ impl ThemeColor {
     pub fn lighten(&self, factor: f32) -> ThemeColor {
         let l = Lab::from(self.col);
         let lcol = l.lighten(factor);
-        ThemeColor{
+        ThemeColor {
             col: Rgb::from(lcol),
         }
     }
@@ -59,14 +59,15 @@ impl ThemeColor {
 
     pub fn to_hex(&self) -> String {
         let (r, g, b) = self.col.into_components();
-        let (r, g, b) = ((r * 255.0 + 0.5) as u8,
-                         (g * 255.0 + 0.5) as u8,
-                         (b * 255.0 + 0.5) as u8);
-        let c = Srgb::new(r,g,b);
+        let (r, g, b) = (
+            (r * 255.0 + 0.5) as u8,
+            (g * 255.0 + 0.5) as u8,
+            (b * 255.0 + 0.5) as u8,
+        );
+        let c = Srgb::new(r, g, b);
         format!("#{:x}", c)
     }
 }
-
 
 impl FromStr for ThemeColor {
     type Err = Box<dyn std::error::Error>;
@@ -131,10 +132,12 @@ mod test {
         assert_eq!((b * 255.0).round() as u8, 204);
         let hex = "#123";
         let col = ThemeColor::from_str(hex).unwrap().col;
-        let (r, g, b) = ((col.red * 255.0).round() as u8, 
-        (col.green * 255.0).round() as u8, 
-        (col.blue * 255.0).round() as u8);
-        assert_eq!((r,g,b), (17, 34,51));
+        let (r, g, b) = (
+            (col.red * 255.0).round() as u8,
+            (col.green * 255.0).round() as u8,
+            (col.blue * 255.0).round() as u8,
+        );
+        assert_eq!((r, g, b), (17, 34, 51));
         let hex = "hello";
         assert!(ThemeColor::from_str(hex).is_err());
         assert!(ThemeColor::from_str("#ff").is_err());
@@ -143,16 +146,17 @@ mod test {
         assert!(ThemeColor::from_str("#0000000").is_err());
         let hex = "#123456";
         let tc = ThemeColor::from_str(hex).unwrap();
-        assert_eq!((tc.col.red * 255.0).round() as u8 , 18);
+        assert_eq!((tc.col.red * 255.0).round() as u8, 18);
         assert_eq!((tc.col.green * 255.0).round() as u8, 52);
         assert_eq!((tc.col.blue * 255.0).round() as u8, 86);
-        let  tc = ThemeColor::from_str("#fff");
+        let tc = ThemeColor::from_str("#fff");
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#ece3db");
         assert_relative_eq!(tc.unwrap().col, Rgb::new(0.92549026, 0.89019614, 0.8588236));
         let tc = ThemeColor::from_str("#3366cc");
         assert_relative_eq!(tc.unwrap().col, Rgb::new(0.2, 0.4, 0.8));
-
+        let tc = ThemeColor::from_str("fffffg");
+        assert!(tc.is_err());
     }
 
     #[test]
@@ -186,15 +190,15 @@ mod test {
         let tc = ThemeColor::from_str("#abc123");
         assert_eq!(tc.unwrap().to_hex(), "#abc123");
         let c = Srgb::new(1.0, 1.0, 1.0);
-        assert_eq!(ThemeColor{col: c}.to_hex(), "#ffffff");
+        assert_eq!(ThemeColor { col: c }.to_hex(), "#ffffff");
         let c = Srgb::new(0.0, 0.0, 0.0);
-        assert_eq!(ThemeColor{col: c}.to_hex(), "#000000");
+        assert_eq!(ThemeColor { col: c }.to_hex(), "#000000");
         let c = Srgb::new(0.22, 0.188, 0.114);
-        assert_eq!(ThemeColor{col: c}.to_hex(), "#38301d");
+        assert_eq!(ThemeColor { col: c }.to_hex(), "#38301d");
         let tc = ThemeColor::from_str("#abc");
         assert_eq!(tc.unwrap().to_hex(), "#aabbcc");
         let col = Srgb::new(0.196, 0.66, 0.32);
-        assert_eq!(ThemeColor{col}.to_hex(), "#32a852");
+        assert_eq!(ThemeColor { col }.to_hex(), "#32a852");
     }
 
     #[test]
