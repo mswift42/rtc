@@ -2,7 +2,7 @@ use palette::rgb::{Rgb, RgbStandard};
 use palette::{Component, Lab, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use std::num::ParseIntError;
-use std::str::FromStr;
+use core::str::FromStr;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -69,6 +69,10 @@ impl ThemeColor {
     }
 }
 
+enum FromHexError {
+    ParseIntError(ParseIntError),
+    HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
+}
 impl FromStr for ThemeColor {
     type Err = Box<dyn std::error::Error>;
 
@@ -103,7 +107,6 @@ impl FromStr for ThemeColor {
         }
     }
 }
-
 #[cfg(test)]
 mod test {
     use super::*;
