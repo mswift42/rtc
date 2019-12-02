@@ -73,8 +73,16 @@ enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
 }
+
+impl From<ParseIntError> for FromHexError {
+    fn from(error: ParseIntError) -> Self {
+        FromHexError::ParseIntError(error)
+    }
+}
+
+
 impl FromStr for ThemeColor {
-    type Err = Box<dyn std::error::Error>;
+    type Err = FromHexError;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
         match hex_code.len() {
@@ -103,7 +111,7 @@ impl FromStr for ThemeColor {
 
                 Ok(ThemeColor { col })
             }
-            _ => Err("invalid hex_code length".into()),
+            _ => Err("invalid hex code length".into()),
         }
     }
 }
