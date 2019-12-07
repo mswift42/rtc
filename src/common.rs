@@ -3,6 +3,8 @@ use palette::{Component, Lab, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use std::num::ParseIntError;
 use core::str::FromStr;
+use palette::named::from_str;
+use crate::common::FromHexError::HexFormatError;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -77,6 +79,34 @@ enum FromHexError {
 impl From<ParseIntError> for FromHexError {
     fn from(error: ParseIntError) -> Self {
         FromHexError::ParseIntError(error)
+    }
+}
+
+impl FromStr for Rgb<Srgb, u8> {
+    type Err = FromHexError;
+
+    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
+        match hex_code.len() {
+            4 | 7 => {
+                let (red, green, blue, factor) = if hex_code.len() == 7 {
+                    (
+                    u8::from_str_radix(&hex_code[1..3], 16)?,
+                    u8::from_str_radix(&hex_code[3..5], 16)?,
+                    u8::from_str_radix(&hex_code[5..7], 16)?,
+                    1 )
+                }else {
+                    (
+                        u8::from_str_radix(&&hex_code[1..2], 16)?,
+                        u8::from_str_radix(&hex_code[2..3], 16)?,
+                        u8::from_str_radix(&hex_code[3..4], 16)?,
+                        1 )
+                    )
+                };
+
+                Ok(Rgb::new(red, green, blue))
+            },
+            _ => FromHexError::HexFormatError("invalid length!")
+        }
     }
 }
 
