@@ -71,6 +71,8 @@ impl ThemeColor {
     }
 }
 
+type RgbColor = Rgb<Srgb, u8>;
+
 enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
@@ -82,7 +84,7 @@ impl From<ParseIntError> for FromHexError {
     }
 }
 
-impl FromStr for Rgb<Srgb, u8> {
+impl FromStr for RgbColor {
     type Err = FromHexError;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
@@ -100,7 +102,6 @@ impl FromStr for Rgb<Srgb, u8> {
                         u8::from_str_radix(&hex_code[2..3], 16)?,
                         u8::from_str_radix(&hex_code[3..4], 16)?,
                         1 )
-                    )
                 };
 
                 Ok(Rgb::new(red, green, blue))
