@@ -71,7 +71,10 @@ impl ThemeColor {
     }
 }
 
-type RgbColor = Rgb<Srgb, u8>;
+
+pub struct RgbColor {
+    pub col: Rgb<Srgb, u8>;
+}
 
 enum FromHexError {
     ParseIntError(ParseIntError),
@@ -103,8 +106,13 @@ impl FromStr for RgbColor {
                         u8::from_str_radix(&hex_code[3..4], 16)?,
                         1 )
                 };
+                let col = Rgb::new(
+                    red * factor,
+                    green * factor,
+                    blue * factor
+                );
 
-                Ok(Rgb::new(red, green, blue))
+                Ok(RgbColor{col})
             },
             _ => FromHexError::HexFormatError("invalid length!")
         }
