@@ -72,9 +72,6 @@ impl ThemeColor {
 }
 
 
-pub struct RgbColor {
-    pub col: Rgb<Srgb, u8>;
-}
 
 enum FromHexError {
     ParseIntError(ParseIntError),
@@ -87,41 +84,41 @@ impl From<ParseIntError> for FromHexError {
     }
 }
 
-impl FromStr for RgbColor {
-    type Err = FromHexError;
-
-    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
-        match hex_code.len() {
-            4 | 7 => {
-                let (red, green, blue, factor) = if hex_code.len() == 7 {
-                    (
-                    u8::from_str_radix(&hex_code[1..3], 16)?,
-                    u8::from_str_radix(&hex_code[3..5], 16)?,
-                    u8::from_str_radix(&hex_code[5..7], 16)?,
-                    1 )
-                }else {
-                    (
-                        u8::from_str_radix(&&hex_code[1..2], 16)?,
-                        u8::from_str_radix(&hex_code[2..3], 16)?,
-                        u8::from_str_radix(&hex_code[3..4], 16)?,
-                        1 )
-                };
-                let col = Rgb::new(
-                    red * factor,
-                    green * factor,
-                    blue * factor
-                );
-
-                Ok(RgbColor{col})
-            },
-            _ => FromHexError::HexFormatError("invalid length!")
-        }
-    }
-}
-
+//impl FromStr for RgbColor {
+//    type Err = FromHexError;
+//
+//    fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
+//        match hex_code.len() {
+//            4 | 7 => {
+//                let (red, green, blue, factor) = if hex_code.len() == 7 {
+//                    (
+//                    u8::from_str_radix(&hex_code[1..3], 16)?,
+//                    u8::from_str_radix(&hex_code[3..5], 16)?,
+//                    u8::from_str_radix(&hex_code[5..7], 16)?,
+//                    1 )
+//                }else {
+//                    (
+//                        u8::from_str_radix(&&hex_code[1..2], 16)?,
+//                        u8::from_str_radix(&hex_code[2..3], 16)?,
+//                        u8::from_str_radix(&hex_code[3..4], 16)?,
+//                        1 )
+//                };
+//                let col = Rgb::new(
+//                    red * factor,
+//                    green * factor,
+//                    blue * factor
+//                );
+//
+//                Ok(RgbColor{col})
+//            },
+//            _ => FromHexError::HexFormatError("invalid length!")
+//        }
+//    }
+//}
+//
 
 impl FromStr for ThemeColor {
-    type Err = FromHexError;
+    type Err = Box<dyn std::error::Error>;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
         match hex_code.len() {
