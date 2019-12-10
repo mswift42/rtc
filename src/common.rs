@@ -1,8 +1,9 @@
 use palette::rgb::{Rgb, RgbStandard};
 use palette::{Component, Lab, LinSrgb, Shade, Srgb};
 use std::error::Error;
-use std::num::ParseIntError;
+use core::num::ParseIntError;
 use core::str::FromStr;
+use core::fmt;
 use palette::named::from_str;
 use crate::common::FromHexError::HexFormatError;
 
@@ -34,7 +35,7 @@ pub struct ThemeMap {
 }
 
 pub struct ThemeColor {
-    pub col: Srgb,
+    pub col: Rgb,
 }
 
 impl ThemeColor {
@@ -71,18 +72,27 @@ impl ThemeColor {
     }
 }
 
+pub struct RgbColor {
+    col: Rgb,
+}
+
+
 
 
 enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
 }
-
-impl From<ParseIntError> for FromHexError {
-    fn from(error: ParseIntError) -> Self {
-        FromHexError::ParseIntError(error)
+#[cfg(feature = "std")]
+impl fmt::Display for FromHexError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "invalid hex code length")
     }
+
 }
+
+
+
 
 //impl FromStr for RgbColor {
 //    type Err = FromHexError;
