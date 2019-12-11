@@ -94,6 +94,12 @@ impl fmt::Display for FromHexError {
 
 }
 
+impl From<ParseIntError> for FromHexError {
+    fn from(err: ParseIntError) -> FromHexError {
+        FromHexError::ParseIntError(err)
+    }
+}
+
 
 
 
