@@ -4,8 +4,6 @@ use std::error::Error;
 use core::num::ParseIntError;
 use core::str::FromStr;
 use core::fmt;
-use palette::named::from_str;
-use crate::common::FromHexError::HexFormatError;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -86,7 +84,12 @@ enum FromHexError {
 #[cfg(feature = "std")]
 impl fmt::Display for FromHexError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "invalid hex code length")
+        match *self {
+            FromHexError::ParseIntError(ref e) =>
+            e.fmt(f),
+            FromHexError::HexFormatError(ref s) =>
+                write!(f, "invalid hex code length")
+        }
     }
 
 }
