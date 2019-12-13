@@ -77,7 +77,8 @@ pub struct RgbColor {
 
 
 
-enum FromHexError {
+#[derive(Debug)]
+pub enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
 }
@@ -99,6 +100,14 @@ impl From<ParseIntError> for FromHexError {
         FromHexError::ParseIntError(err)
     }
 }
+
+impl From<&'static str> for FromHexError {
+    fn from(err: &'static str) -> FromHexError {
+        FromHexError::HexFormatError(err)
+    }
+}
+
+
 
 
 
@@ -137,7 +146,7 @@ impl From<ParseIntError> for FromHexError {
 //
 
 impl FromStr for ThemeColor {
-    type Err = Box<dyn std::error::Error>;
+    type Err = FromHexError;
 
     fn from_str(hex_code: &str) -> Result<Self, Self::Err> {
         match hex_code.len() {
@@ -166,7 +175,7 @@ impl FromStr for ThemeColor {
 
                 Ok(ThemeColor { col })
             }
-            _ => Err("invalid hex code length".into()),
+            _ => Err("invalid hex code length".into())
         }
     }
 }
