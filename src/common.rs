@@ -82,19 +82,6 @@ pub enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
 }
-#[cfg(feature = "std")]
-impl fmt::Display for FromHexError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match *self {
-            FromHexError::ParseIntError(ref e) =>
-            e.fmt(f),
-            FromHexError::HexFormatError(ref s) =>
-                write!(f, "invalid hex code length")
-        }
-    }
-
-}
-
 impl From<ParseIntError> for FromHexError {
     fn from(err: ParseIntError) -> FromHexError {
         FromHexError::ParseIntError(err)
