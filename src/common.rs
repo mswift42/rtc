@@ -115,21 +115,21 @@ impl FromStr for ThemeColor {
                         u8::from_str_radix(&hex[..2], 16)?,
                         u8::from_str_radix(&hex[2..4], 16)?,
                         u8::from_str_radix(&hex[4..6], 16)?,
-                        1.0 / 255.0,
+                        1
                     )
                 } else {
                     (
                         u8::from_str_radix(&hex[..1], 16)?,
                         u8::from_str_radix(&hex[1..2], 16)?,
                         u8::from_str_radix(&hex[2..3], 16)?,
-                        1.0 / 15.0,
+                        17
                     )
                 };
 
                 let col = Rgb::new(
-                    red as f32 * factor,
-                    green as f32 * factor,
-                    blue as f32 * factor,
+                    red * factor,
+                    green * factor,
+                    blue * factor,
                 );
 
                 Ok(ThemeColor { col })
@@ -191,6 +191,8 @@ mod test {
         assert_relative_eq!(tc.unwrap().col, Rgb::new(0.2, 0.4, 0.8));
         let tc = ThemeColor::from_str("fffffg");
         assert!(tc.is_err());
+        let tc = ThemeColor::from_str("abc");
+
     }
 
     #[test]
