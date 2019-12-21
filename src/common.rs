@@ -31,8 +31,9 @@ pub struct ThemeMap {
     pub invwarning2: ThemeColor,
 }
 
+
 pub struct ThemeColor {
-    pub col: Rgb,
+    pub col: Srgb<u8>,
 }
 
 impl ThemeColor {
@@ -69,9 +70,6 @@ impl ThemeColor {
     }
 }
 
-pub struct RgbColor {
-    col: Rgb,
-}
 
 
 
@@ -109,30 +107,23 @@ impl FromStr for ThemeColor {
             hex_code
         };
         match hex.len() {
-            3 | 6 => {
-                let (red, green, blue, factor) = if hex.len() == 6 {
-                    (
-                        u8::from_str_radix(&hex[..2], 16)?,
-                        u8::from_str_radix(&hex[2..4], 16)?,
-                        u8::from_str_radix(&hex[4..6], 16)?,
-                        1
-                    )
-                } else {
-                    (
-                        u8::from_str_radix(&hex[..1], 16)?,
-                        u8::from_str_radix(&hex[1..2], 16)?,
-                        u8::from_str_radix(&hex[2..3], 16)?,
-                        17
-                    )
-                };
+            3 => {
+                let red = u8::from_str_radix(&hex[..1], 16)?;
+                let green = u8::from_str_radix(&hex[1..2], 16)?;
+                let blue = u8::from_str_radix(&hex[2..3], 16)?;
+               let col = Rgb::new(red  * 17,
+               green * 17,
+               blue * 17,
+               ) ;
+                Ok(ThemeColor{col})
 
-                let col = Rgb::new(
-                    red * factor,
-                    green * factor,
-                    blue * factor,
-                );
-
-                Ok(ThemeColor { col })
+            },
+            6 => {
+                let red = u8::from_str_radix(&hex[..2])?;
+                let green = u8::from_str_radix(&hex[2..4])?;
+                let blue = u8::from_str_radix(&hex[4..6])?;
+                let col = Rgb::new(red, green, blue);
+                Ok(ThemeColor{col})
             }
             _ => Err("invalid hex code length".into())
         }
