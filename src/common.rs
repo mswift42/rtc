@@ -38,15 +38,19 @@ pub struct ThemeColor {
 
 impl ThemeColor {
     pub fn is_dark_bg(&self) -> bool {
-        let (l, _, _): (f32, f32, f32) = Lab::from(self.col).into_components();
+        let srgb: Srgb<f32> = self.col.into_format();
+        let (l, _, _): (f32, f32, f32) = Lab::from(srgb).into_components();
         l < 50.0
     }
 
     pub fn lighten(&self, factor: f32) -> ThemeColor {
-        let l = Lab::from(self.col);
+        let rgb: Srgb<f32> = self.col.into_format();
+        let l = Lab::from(rgb);
         let lcol = l.lighten(factor);
+        let rgbf32 = Rgb::from(lcol);
+        let rgbu: Srgb<u8> = rgbf32.into_format();
         ThemeColor {
-            col: Rgb::from(lcol),
+            col: rgbu,
         }
     }
 
@@ -140,7 +144,7 @@ mod test {
         let hex = "#fff";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
-        assert_relative_eq!(tc.unwrap().col, Rgb::new(255,255,255));
+        assert_eq!(tc.unwrap().col, Rgb::new(255,255,255));
         let hex = "#abc";
         let tc = ThemeColor::from_str(hex);
         let col = tc.unwrap().col;
@@ -160,9 +164,9 @@ mod test {
         let tc = ThemeColor::from_str("#fff");
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#ece3db");
-        assert_relative_eq!(tc.unwrap().col, Rgb::new(236,227,219));
+        assert_eq!(tc.unwrap().col, Rgb::new(236,227,219));
         let tc = ThemeColor::from_str("#3366cc");
-        assert_relative_eq!(tc.unwrap().col, Rgb::new(51, 102,204));
+        assert_eq!(tc.unwrap().col, Rgb::new(51, 102,204));
         let tc = ThemeColor::from_str("fffffg");
         assert!(tc.is_err());
         let tc = ThemeColor::from_str("abc");
