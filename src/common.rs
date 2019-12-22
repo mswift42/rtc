@@ -59,14 +59,7 @@ impl ThemeColor {
     }
 
     pub fn to_hex(&self) -> String {
-        let (r, g, b) = self.col.into_components();
-        let (r, g, b) = (
-            (r * 255.0 + 0.5) as u8,
-            (g * 255.0 + 0.5) as u8,
-            (b * 255.0 + 0.5) as u8,
-        );
-        let c = Srgb::new(r, g, b);
-        format!("#{:x}", c)
+        format!("#{:x}", self.col)
     }
 }
 
