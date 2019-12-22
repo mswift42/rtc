@@ -116,9 +116,9 @@ impl FromStr for ThemeColor {
 
             },
             6 => {
-                let red = u8::from_str_radix(&hex[..2])?;
-                let green = u8::from_str_radix(&hex[2..4])?;
-                let blue = u8::from_str_radix(&hex[4..6])?;
+                let red = u8::from_str_radix(&hex[..2], 16)?;
+                let green = u8::from_str_radix(&hex[2..4], 16)?;
+                let blue = u8::from_str_radix(&hex[4..6], 16)?;
                 let col = Rgb::new(red, green, blue);
                 Ok(ThemeColor{col})
             }
@@ -137,10 +137,10 @@ mod test {
         let tc = ThemeColor::from_str("#ffffff");
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
-        assert_relative_eq!(col, Rgb::new(255,255,255));
+        assert_eq!(col, Rgb::new(255,255,255));
         let tc = ThemeColor::from_str("#000000");
         let col = tc.unwrap().col;
-        assert_relative_eq!(col, Rgb::new(0,0,0));
+        assert_eq!(col, Rgb::new(0,0,0));
         let hex = "#fff";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
@@ -160,7 +160,7 @@ mod test {
         assert!(ThemeColor::from_str("#0000000").is_err());
         let hex = "#123456";
         let tc = ThemeColor::from_str(hex).unwrap();
-        assert_eq!(tc.col, Rgb::new(28,52,86));
+        assert_eq!(tc.col, Rgb::new(18,52,86));
         let tc = ThemeColor::from_str("#fff");
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#ece3db");
@@ -203,15 +203,15 @@ mod test {
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#abc123");
         assert_eq!(tc.unwrap().to_hex(), "#abc123");
-        let c = Srgb::new(1.0, 1.0, 1.0);
+        let c = Srgb::new(255,255,255);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#ffffff");
-        let c = Srgb::new(0.0, 0.0, 0.0);
+        let c = Srgb::new(0,0,0);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#000000");
-        let c = Srgb::new(0.22, 0.188, 0.114);
+        let c = Srgb::new(56,48,29);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#38301d");
         let tc = ThemeColor::from_str("#abc");
         assert_eq!(tc.unwrap().to_hex(), "#aabbcc");
-        let col = Srgb::new(0.196, 0.66, 0.32);
+        let col = Srgb::new(50, 168,82);
         assert_eq!(ThemeColor { col }.to_hex(), "#32a852");
     }
 
