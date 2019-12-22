@@ -47,18 +47,19 @@ impl ThemeColor {
         let rgb: Srgb<f32> = self.col.into_format();
         let l = Lab::from(rgb);
         let lcol = l.lighten(factor);
-        let rgbf32 = Rgb::from(lcol);
-        let rgbu: Srgb<u8> = rgbf32.into_format();
+        let rgb: Srgb<u8> = Rgb::from(lcol).into_format();
         ThemeColor {
-            col: rgbu,
+            col: rgb,
         }
     }
 
     pub fn darken(&self, factor: f32) -> ThemeColor {
-        let l = Lab::from(self.col);
+        let srgb: Srgb<f32> = self.col.into_format();
+        let l = Lab::from(srgb);
         let dcol = l.darken(factor);
+        let rgb: Srgb<u8> = Rgb::from(dcol).into_format();
         ThemeColor {
-            col: Rgb::from(dcol),
+            col: rgb,
         }
     }
 
@@ -66,7 +67,6 @@ impl ThemeColor {
         format!("#{:x}", self.col)
     }
 }
-
 
 
 
