@@ -69,13 +69,12 @@ impl ThemeColor {
 }
 
 
-
-
 #[derive(Debug)]
 pub enum FromHexError {
     ParseIntError(ParseIntError),
     HexFormatError(&'static str), // Like "invalid hex code length" or "unexpected hex code prefix"
 }
+
 impl From<ParseIntError> for FromHexError {
     fn from(err: ParseIntError) -> FromHexError {
         FromHexError::ParseIntError(err)
@@ -87,11 +86,6 @@ impl From<&'static str> for FromHexError {
         FromHexError::HexFormatError(err)
     }
 }
-
-
-
-
-
 
 
 impl FromStr for ThemeColor {
@@ -108,24 +102,24 @@ impl FromStr for ThemeColor {
                 let red = u8::from_str_radix(&hex[..1], 16)?;
                 let green = u8::from_str_radix(&hex[1..2], 16)?;
                 let blue = u8::from_str_radix(&hex[2..3], 16)?;
-               let col = Rgb::new(red  * 17,
-               green * 17,
-               blue * 17,
-               ) ;
-                Ok(ThemeColor{col})
-
-            },
+                let col = Rgb::new(red * 17,
+                                   green * 17,
+                                   blue * 17,
+                );
+                Ok(ThemeColor { col })
+            }
             6 => {
                 let red = u8::from_str_radix(&hex[..2], 16)?;
                 let green = u8::from_str_radix(&hex[2..4], 16)?;
                 let blue = u8::from_str_radix(&hex[4..6], 16)?;
                 let col = Rgb::new(red, green, blue);
-                Ok(ThemeColor{col})
+                Ok(ThemeColor { col })
             }
             _ => Err("invalid hex code length".into())
         }
     }
 }
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -137,21 +131,21 @@ mod test {
         let tc = ThemeColor::from_str("#ffffff");
         assert!(tc.is_ok());
         let col = tc.unwrap().col;
-        assert_eq!(col, Rgb::new(255,255,255));
+        assert_eq!(col, Rgb::new(255, 255, 255));
         let tc = ThemeColor::from_str("#000000");
         let col = tc.unwrap().col;
-        assert_eq!(col, Rgb::new(0,0,0));
+        assert_eq!(col, Rgb::new(0, 0, 0));
         let hex = "#fff";
         let tc = ThemeColor::from_str(hex);
         assert!(tc.is_ok());
-        assert_eq!(tc.unwrap().col, Rgb::new(255,255,255));
+        assert_eq!(tc.unwrap().col, Rgb::new(255, 255, 255));
         let hex = "#abc";
         let tc = ThemeColor::from_str(hex);
         let col = tc.unwrap().col;
-        assert_eq!(col, Rgb::new(170, 187,204));
+        assert_eq!(col, Rgb::new(170, 187, 204));
         let hex = "#123";
         let col = ThemeColor::from_str(hex).unwrap().col;
-        assert_eq!(col, Rgb::new(17,34,51));
+        assert_eq!(col, Rgb::new(17, 34, 51));
         let hex = "hello";
         assert!(ThemeColor::from_str(hex).is_err());
         assert!(ThemeColor::from_str("#ff").is_err());
@@ -160,17 +154,21 @@ mod test {
         assert!(ThemeColor::from_str("#0000000").is_err());
         let hex = "#123456";
         let tc = ThemeColor::from_str(hex).unwrap();
-        assert_eq!(tc.col, Rgb::new(18,52,86));
+        assert_eq!(tc.col, Rgb::new(18, 52, 86));
         let tc = ThemeColor::from_str("#fff");
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#ece3db");
-        assert_eq!(tc.unwrap().col, Rgb::new(236,227,219));
+        assert_eq!(tc.unwrap().col, Rgb::new(236, 227, 219));
         let tc = ThemeColor::from_str("#3366cc");
-        assert_eq!(tc.unwrap().col, Rgb::new(51, 102,204));
+        assert_eq!(tc.unwrap().col, Rgb::new(51, 102, 204));
         let tc = ThemeColor::from_str("fffffg");
         assert!(tc.is_err());
         let tc = ThemeColor::from_str("abc");
         assert_eq!(tc.unwrap().col, Rgb::new(170, 187, 204));
+        assert_eq!(ThemeColor::from_str("#ffffff").unwrap().col,
+                   ThemeColor::from_str("ffffff").unwrap().col);
+        assert_eq!(ThemeColor::from_str("abc").unwrap().col,
+                   ThemeColor::from_str("#aabbcc").unwrap().col);
     }
 
     #[test]
@@ -203,15 +201,15 @@ mod test {
         assert_eq!(tc.unwrap().to_hex(), "#ffffff");
         let tc = ThemeColor::from_str("#abc123");
         assert_eq!(tc.unwrap().to_hex(), "#abc123");
-        let c = Srgb::new(255,255,255);
+        let c = Srgb::new(255, 255, 255);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#ffffff");
-        let c = Srgb::new(0,0,0);
+        let c = Srgb::new(0, 0, 0);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#000000");
-        let c = Srgb::new(56,48,29);
+        let c = Srgb::new(56, 48, 29);
         assert_eq!(ThemeColor { col: c }.to_hex(), "#38301d");
         let tc = ThemeColor::from_str("#abc");
         assert_eq!(tc.unwrap().to_hex(), "#aabbcc");
-        let col = Srgb::new(50, 168,82);
+        let col = Srgb::new(50, 168, 82);
         assert_eq!(ThemeColor { col }.to_hex(), "#32a852");
     }
 
