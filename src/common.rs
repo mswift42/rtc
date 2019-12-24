@@ -86,6 +86,15 @@ impl From<&'static str> for FromHexError {
         FromHexError::HexFormatError(err)
     }
 }
+#[cfg(feature ="std")]
+impl std::error::Error for FromHexError {
+   fn source(&self) -> Option<dyn std::error::Error + 'static> {
+       match *self {
+           FromHexError::HexFormatError(s) => None,
+           FromHexError::ParseIntError(e) => Some(e),
+       }
+   }
+}
 
 
 impl FromStr for ThemeColor {
@@ -123,6 +132,7 @@ impl FromStr for ThemeColor {
 #[cfg(test)]
 mod test {
     use super::*;
+    use std::fmt::Debug;
 
     extern crate approx;
 
@@ -169,6 +179,8 @@ mod test {
                    ThemeColor::from_str("ffffff").unwrap().col);
         assert_eq!(ThemeColor::from_str("abc").unwrap().col,
                    ThemeColor::from_str("#aabbcc").unwrap().col);
+        let tc = ThemeColor::from_str("");
+//        assert_eq!(tc.err().unwrap().fmt(), "invalid hex code length");
     }
 
     #[test]
