@@ -3,6 +3,7 @@ use palette::{Component, Lab, LinSrgb, Shade, Srgb};
 use std::error::Error;
 use core::num::ParseIntError;
 use core::str::FromStr;
+use std::fmt::Formatter;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -96,6 +97,18 @@ impl std::error::Error for FromHexError {
    }
 }
 
+impl core::fmt::Display for FromHexError {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        match *self {
+            FromHexError::ParseIntError(e) => {
+                write!(f, "ParseIntError: {}", e)
+            },
+            FromHexError::HexFormatError(s) => {
+                write!(f, "HexFormatError: {}", s)
+            }
+        }
+    }
+}
 
 impl FromStr for ThemeColor {
     type Err = FromHexError;
