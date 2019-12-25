@@ -87,24 +87,26 @@ impl From<&'static str> for FromHexError {
         FromHexError::HexFormatError(err)
     }
 }
-#[cfg(feature ="std")]
+
+#[cfg(feature = "std")]
 impl std::error::Error for FromHexError {
-   fn source(&self) -> Option<dyn std::error::Error + 'static> {
-       match *self {
-           FromHexError::HexFormatError(s) => None,
-           FromHexError::ParseIntError(e) => Some(e),
-       }
-   }
+    fn source(&self) -> Option<dyn std::error::Error + 'static> {
+        match &*self {
+            FromHexError::HexFormatError(s) => None,
+            FromHexError::ParseIntError(e) => Some(e),
+        }
+    }
 }
 
 impl core::fmt::Display for FromHexError {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
-        match *self {
+        match &*self {
             FromHexError::ParseIntError(e) => {
                 write!(f, "ParseIntError: {}", e)
-            },
+            }
             FromHexError::HexFormatError(s) => {
-                write!(f, "HexFormatError: {}", s)
+                write!(f, "HexFormatError: {}, Please use format '#fff', 'fff', '#ffffff' or\
+                'ffffff'.", s)
             }
         }
     }
@@ -137,7 +139,7 @@ impl FromStr for ThemeColor {
                 let col = Rgb::new(red, green, blue);
                 Ok(ThemeColor { col })
             }
-            _ => Err("invalid hex code length".into())
+            _ => Err("invalid hex code format".into())
         }
     }
 }
@@ -146,6 +148,7 @@ impl FromStr for ThemeColor {
 mod test {
     use super::*;
     use std::fmt::Debug;
+    use core::fmt;
 
     extern crate approx;
 
@@ -186,6 +189,7 @@ mod test {
         assert_eq!(tc.unwrap().col, Rgb::new(51, 102, 204));
         let tc = ThemeColor::from_str("fffffg");
         assert!(tc.is_err());
+        assert_eq!(format!("{}", tc.err().unwrap()), "ParseIntError: invalid digit found in string");
         let tc = ThemeColor::from_str("abc");
         assert_eq!(tc.unwrap().col, Rgb::new(170, 187, 204));
         assert_eq!(ThemeColor::from_str("#ffffff").unwrap().col,
@@ -193,7 +197,9 @@ mod test {
         assert_eq!(ThemeColor::from_str("abc").unwrap().col,
                    ThemeColor::from_str("#aabbcc").unwrap().col);
         let tc = ThemeColor::from_str("");
-//        assert_eq!(tc.err().unwrap().fmt(), "invalid hex code length");
+        assert_eq!(format!("{}", tc.err().unwrap()), "HexFormatError: invalid hex code format, \
+        Please use format \
+        \'#fff\', \'fff\', \'#ffffff\' or\'ffffff\'.");
     }
 
     #[test]
