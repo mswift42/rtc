@@ -1,1 +1,2 @@
-char = { ASCII_ALPHANUMERIC | "." | "_" | "/" }
+char = { ASCII_ALPHANUMERIC | "." | "_" }
+value = { "#" ~ ASCII_HEX_DIGIT+ }
