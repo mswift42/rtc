@@ -90,9 +90,9 @@ impl From<&'static str> for FromHexError {
 
 #[cfg(feature = "std")]
 impl std::error::Error for FromHexError {
-    fn source(&self) -> Option<dyn std::error::Error + 'static> {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match &*self {
-            FromHexError::HexFormatError(s) => None,
+            FromHexError::HexFormatError(_s) => None,
             FromHexError::ParseIntError(e) => Some(e),
         }
     }
