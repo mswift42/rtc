@@ -1,2 +1,13 @@
 char = { ASCII_ALPHANUMERIC | "." | "_" }
-value = { "#" ~ ASCII_HEX_DIGIT+ }
+
+colorvalue = { "#" ~ ASCII_HEX_DIGIT+ }
+
+letdef = {"let"}
+
+variable = {char ~ ":" ~ char+}
+
+vardef = {letdef ~ SPACE_SEPARATOR ~ variable ~ "=" ~ "\"" ~ colorvalue ~ "\""}
+
+
+
+
