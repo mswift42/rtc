@@ -8,6 +8,14 @@ variable = {char ~ ":" ~ char+}
 
 vardef = {letdef ~ SPACE_SEPARATOR ~ variable ~ "=" ~ "\"" ~ colorvalue ~ "\""}
 
+facename = { char+ }
+
+bg = { "guibg" }
+
+fg = { "guifg" }
+
+facedef = { "exe" ~ SPACE_SEPARATOR ~ facename ~ SPACE_SEPARATOR ~ fg | bg }
+
 
 
 
