@@ -14,6 +14,8 @@ bg = { "guibg" }
 
 fg = { "guifg" }
 
+cterm = { "ctermfg=" | "ctermbg="~ ANY ~ SPACE_SEPARATOR}
+
 facedef = { "exe hi" | "hi"  ~ SPACE_SEPARATOR ~ facename ~ SPACE_SEPARATOR ~ fg | bg }
 
 
