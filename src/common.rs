@@ -102,10 +102,10 @@ impl core::fmt::Display for FromHexError {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         match &*self {
             FromHexError::ParseIntError(e) => {
-                write!(f, "ParseIntError: {}", e)
+                write!(f, "{}", e)
             }
             FromHexError::HexFormatError(s) => {
-                write!(f, "HexFormatError: {}, Please use format '#fff', 'fff', '#ffffff' or\
+                write!(f, "{}, please use format '#fff', 'fff', '#ffffff' or\
                 'ffffff'.", s)
             }
         }
@@ -189,7 +189,7 @@ mod test {
         assert_eq!(tc.unwrap().col, Rgb::new(51, 102, 204));
         let tc = ThemeColor::from_str("fffffg");
         assert!(tc.is_err());
-        assert_eq!(format!("{}", tc.err().unwrap()), "ParseIntError: invalid digit found in string");
+        assert_eq!(format!("{}", tc.err().unwrap()), "invalid digit found in string");
         let tc = ThemeColor::from_str("abc");
         assert_eq!(tc.unwrap().col, Rgb::new(170, 187, 204));
         assert_eq!(ThemeColor::from_str("#ffffff").unwrap().col,
@@ -197,8 +197,8 @@ mod test {
         assert_eq!(ThemeColor::from_str("abc").unwrap().col,
                    ThemeColor::from_str("#aabbcc").unwrap().col);
         let tc = ThemeColor::from_str("");
-        assert_eq!(format!("{}", tc.err().unwrap()), "HexFormatError: invalid hex code format, \
-        Please use format \
+        assert_eq!(format!("{}", tc.err().unwrap()), "invalid hex code format, \
+        please use format \
         \'#fff\', \'fff\', \'#ffffff\' or\'ffffff\'.");
     }
 

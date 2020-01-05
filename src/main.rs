@@ -11,5 +11,5 @@ fn main() {
     let b = ThemeColor::from_str("#fff");
     println!("{:?}", b.unwrap().to_hex());
     let c = ThemeColor::from_str("");
-    println!("{:?}", c.err());
+    println!("{}", c.err().unwrap());
 }
