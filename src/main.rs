@@ -1,5 +1,4 @@
 mod common;
-#[cfg_attr(test, macro_use)]
 extern crate approx;
 use common::ThemeColor;
 use std::str::FromStr;

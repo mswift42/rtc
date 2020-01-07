@@ -1,5 +1,5 @@
 use palette::rgb::{Rgb, RgbStandard};
-use palette::{Component, Lab, LinSrgb, Shade, Srgb};
+use palette::{Lab,  Shade, Srgb};
 use std::error::Error;
 use core::num::ParseIntError;
 use core::str::FromStr;
@@ -148,7 +148,6 @@ impl FromStr for ThemeColor {
 mod test {
     use super::*;
     use std::fmt::Debug;
-    use core::fmt;
 
     extern crate approx;
 
