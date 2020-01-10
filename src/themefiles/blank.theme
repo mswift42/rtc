@@ -1,0 +1,12 @@
+// please customize as desired.
+background="#000000"
+foreground="#ffffff"
+keyword="#000000"
+function="#000000"
+comment="#000000"
+string="#000000"
+type="#000000"
+builtin="#000000"
+constant="#000000"
+warning="#ff0000"
+warning2="#ff0000"
