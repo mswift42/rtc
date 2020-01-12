@@ -1,0 +1,3 @@
+apstr = { "\"" }
+
+colordef = { apstr? ~ "#" ~ ASCII_HEX_DIGIT+ ~ apstr? }
