@@ -1,3 +1,14 @@
 apstr = { "\"" }
 
-colordef = { apstr? ~ "#" ~ ASCII_HEX_DIGIT+ ~ apstr? }
+colorvalue = { apstr? ~ "#" ~ ASCII_HEX_DIGIT+ ~ apstr? }
+
+face = { ASCII_ALPHA+}
+
+colordef = { face ~ "=" ~ colorvalue }
+
+file = {
+    SOI ~
+    colordef+ ~
+    EOI
+}
+
