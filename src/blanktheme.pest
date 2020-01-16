@@ -6,9 +6,11 @@ face = { ASCII_ALPHA+}
 
 colordef = { face ~ "=" ~ colorvalue }
 
+comment = _{ "//" ~ ANY}
+
 file = {
     SOI ~
-    colordef+ ~
+    (colordef | comment)+ ~
     EOI
 }
 
