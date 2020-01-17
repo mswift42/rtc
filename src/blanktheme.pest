@@ -1,16 +1,16 @@
 apstr = { "\"" }
 
-colorvalue = { apstr? ~ "#" ~ ASCII_HEX_DIGIT+ ~ apstr? }
+colorvalue = { "\"" ~ "#" ~ ASCII_HEX_DIGIT+ ~ apstr }
 
 face = { ASCII_ALPHA+}
 
-colordef = { face ~ "=" ~ colorvalue }
+colordef = { face ~ "=" ~ colorvalue ~ "\n"}
 
 comment = _{ "//" ~ ANY}
 
 file = {
     SOI ~
-    (colordef | comment)+ ~
+    (colordef | comment)* ~
     EOI
 }
 
