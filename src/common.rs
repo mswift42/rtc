@@ -1,9 +1,10 @@
 use palette::rgb::{Rgb, RgbStandard};
-use palette::{Lab,  Shade, Srgb};
+use palette::{Lab, Shade, Srgb};
 use std::error::Error;
 use core::num::ParseIntError;
 use core::str::FromStr;
 use std::fmt::Formatter;
+use std::collections::HashMap;
 
 pub struct ThemeMap {
     pub dark_bg: bool,
@@ -23,16 +24,55 @@ pub struct ThemeMap {
     pub string: ThemeColor,
     pub warning: ThemeColor,
     pub warning2: ThemeColor,
-    pub invbuiltin: ThemeColor,
-    pub invkeyword: ThemeColor,
-    pub invtype: ThemeColor,
-    pub invfunc: ThemeColor,
-    pub invstring: ThemeColor,
-    pub invwarning: ThemeColor,
-    pub invwarning2: ThemeColor,
 }
 
+impl ThemeMap {
+    pub fn from_color_map(cm: HashMap<&str, ThemeColor>) -> ThemeMap {
+        let bg = cm["background"].clone();
+        let fg = cm["foreground"].clone();
 
+        let (bg01, bg2, bg3, bg4, fg2) = if bg.is_dark_bg() {
+            (
+                bg.darken(0.1),
+                bg.lighten(0.1),
+                bg.lighten(0.2),
+                bg.lighten(0.3),
+                fg.darken(0.08)
+            )
+        } else {
+            (
+                bg.lighten(0.1),
+                bg.darken(0.1),
+                bg.darken(0.2),
+                bg.darken(0.3),
+                fg.lighten(0.1)
+            )
+        };
+        ThemeMap{
+            dark_bg: bg.is_dark_bg(),
+            fg1: fg,
+            bg1: bg,
+            bg01: bg01,
+            bg2: bg2,
+            bg3: bg3,
+            bg4: bg4,
+            fg2: fg2,
+            builtin: cm["builtin"].clone(),
+            keyword: cm["keyword"].clone(),
+            constant: cm["constant"].clone(),
+            comment: cm["comment"].clone(),
+            func: cm["functionname"].clone(),
+            typeface: cm["typeface"].clone(),
+            string: cm["string"].clone(),
+            warning: cm["warning"].clone(),
+            warning2: cm["warning2"].clone(),
+
+        }
+
+    }
+}
+
+#[derive(Clone)]
 pub struct ThemeColor {
     pub col: Srgb<u8>,
 }
