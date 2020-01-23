@@ -7,7 +7,7 @@ use serde_json::Result;
 type ParseError = Box<dyn Error>;
 
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]
 pub struct JsonTheme {
     pub background: String,
     pub foreground: String,
@@ -15,6 +15,7 @@ pub struct JsonTheme {
     pub function: String,
     pub comment: String,
     pub string: String,
+    #[serde(rename = "type")]
     pub typeface: String,
     pub builtin: String,
     pub constant: String,
@@ -22,9 +23,9 @@ pub struct JsonTheme {
     pub warning2: String,
 }
 
-pub fn from_json(cm: &str) -> Result<HashMap<&str, ThemeColor>, ParseError> {
-    let parsed = json::parse(cm)?;
+pub fn from_json(cm: &str) -> HashMap<&str, ThemeColor> {
+    let parsed: JsonTheme = serde_json::from_str(cm).unwrap();
     let map: HashMap<&str,ThemeColor> = HashMap::new();
-
-
+    println!("{:?}", parsed);
+    map
 }
