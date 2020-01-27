@@ -5,7 +5,7 @@ use core::str::FromStr;
 use serde::Deserialize;
 use serde_json::Result;
 
-type ParseError = Box<dyn Error>;
+type ParseResult<'a> = serde_json::Result<HashMap<&'a str, String>>;
 
 
 #[derive(Deserialize, Debug)]
@@ -24,8 +24,8 @@ pub struct JsonTheme {
     pub warning2: String,
 }
 
-pub fn from_json(cm: &str) -> HashMap<&str, String> {
-    let parsed: JsonTheme = serde_json::from_str(cm).unwrap();
+pub fn from_json(cm: &str) -> ParseResult {
+    let parsed: JsonTheme = serde_json::from_str(cm)?;
     let mut map: HashMap<&str,String> = HashMap::new();
     map.insert("background", parsed.background);
     map.insert("foreground", parsed.foreground);
@@ -38,5 +38,5 @@ pub fn from_json(cm: &str) -> HashMap<&str, String> {
     map.insert("constant", parsed.constant);
     map.insert("warning", parsed.warning);
     map.insert("warning2", parsed.warning2);
-    map
+    Ok(map)
 }
