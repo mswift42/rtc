@@ -4,6 +4,7 @@ use crate::common::ThemeColor;
 use core::str::FromStr;
 use serde::Deserialize;
 use serde_json::Result;
+use json::parse;
 
 type ParseResult<'a> = serde_json::Result<HashMap<&'a str, String>>;
 
@@ -43,6 +44,12 @@ pub fn from_json(cm: &str) -> ParseResult {
 
 pub fn failed_colors(hm: HashMap<&str, String>) -> Vec<String> {
     hm.keys().filter(|i| parse_color(*i).is_none())
+        .map(|i| (*i).to_string())
+        .collect()
+}
+
+pub fn succeeded_colors(hm: HashMap<&str, String>) -> Vec<String> {
+    hm.keys().filter(|i| parse_color(*i).is_some())
         .map(|i| (*i).to_string())
         .collect()
 }
