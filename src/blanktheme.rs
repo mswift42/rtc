@@ -32,9 +32,12 @@ pub struct ParsedColors {
 
 impl ParsedColors {
     pub fn new(hm: HashMap<&str, String>) -> ParsedColors {
-         let sc = succeeded_colors(&hm);
-         let fc = failed_colors(&hm);
-
+        let sc = succeeded_colors(&hm);
+        let fc = failed_colors(&hm);
+        ParsedColors {
+            success: sc,
+            failure: fc,
+        }
     }
 }
 
