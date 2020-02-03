@@ -25,6 +25,20 @@ pub struct JsonTheme {
     pub warning2: String,
 }
 
+pub struct ParsedColors {
+    pub success: Vec<String>,
+    pub failure: Vec<String>,
+}
+
+impl ParsedColors {
+    pub fn new(hm: HashMap<&str, String>) -> ParsedColors {
+         let sc = succeeded_colors(&hm);
+         let fc = failed_colors(&hm);
+
+    }
+}
+
+
 pub fn from_json(cm: &str) -> ParseResult {
     let parsed: JsonTheme = serde_json::from_str(cm)?;
     let mut map: HashMap<&str, String> = HashMap::new();
@@ -42,13 +56,13 @@ pub fn from_json(cm: &str) -> ParseResult {
     Ok(map)
 }
 
-pub fn failed_colors(hm: HashMap<&str, String>) -> Vec<String> {
+pub fn failed_colors(hm: &HashMap<&str, String>) -> Vec<String> {
     hm.keys().filter(|i| parse_color(*i).is_none())
         .map(|i| (*i).to_string())
         .collect()
 }
 
-pub fn succeeded_colors(hm: HashMap<&str, String>) -> Vec<String> {
+pub fn succeeded_colors(hm: &HashMap<&str, String>) -> Vec<String> {
     hm.keys().filter(|i| parse_color(*i).is_some())
         .map(|i| (*i).to_string())
         .collect()
