@@ -1,8 +1,8 @@
-;; {{.Themename}}-theme.el --- Theme
+;; {{ThemeMap.name}}-theme.el --- Theme
 
-;; Copyright (C) 2016 , {{.Author}}
+;; Copyright (C) 2016 , {{ThemeMap.author}}
 
-;; Author: {{.Themeauthor}}
+;; Author: {{ThemeMap.author}}
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24"))
 ;; Created with ThemeCreator, https://github.com/mswift42/themecreator.
@@ -27,28 +27,27 @@
 
 ;;; Code:
 
- (deftheme {{.Themename}})
+ (deftheme {{ThemeMap.name}})
  (let ((class '((class color) (min-colors 89)))
-       (fg1 "{{.Fg1}}")
-       (fg2 "{{.Fg2}}")
-       (fg3 "{{.Fg3}}")
-       (fg4 "{{.Fg4}}")
-       (bg1 "{{.Bg1}}")
-       (bg2 "{{.Bg2}}")
-       (bg3 "{{.Bg3}}")
-       (bg4 "{{.Bg4}}")
-       (builtin "{{.Builtin}}")
-       (keyword "{{.Keyword}}")
-       (const   "{{.Constant}}")
-       (comment "{{.Comment}}")
-       (func    "{{.Func}}")
-       (str     "{{.String}}")
-       (type    "{{.Type}}")
-       (var     "{{.Variable}}")
-       (warning "{{.Warning}}")
-       (warning2 "{{.Warning2}}"))
+       (fg1 "{{ThemeMap.fg1}}")
+       (fg2 "{{ThemeMap.fg2}}")
+       (bg1 "{{ThemeMap.bg1}}")
+       (bg01 "{{ThemeMap.bg01}}")
+       (bg2 "{{ThemeMap.bg2}}")
+       (bg3 "{{ThemeMap.bg3}}")
+       (bg4 "{{ThemeMap.bg4}}")
+       (builtin "{{ThemeMap.builtin}}")
+       (keyword "{{ThemeMap.keyword}}")
+       (const   "{{ThemeMap.constant}}")
+       (comment "{{ThemeMap.comment}}")
+       (func    "{{ThemeMap.func}}")
+       (str     "{{ThemeMap.string}}")
+       (type    "{{ThemeMap.typeface}}")
+       (var     "{{ThemeMap.variable}}")
+       (warning "{{ThemeMap.warning}}")
+       (warning2 "{{ThemeMap.warning2}}"))
    (custom-theme-set-faces
-   '{{themename}}
+   '{{ThemeMap.name}}
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
         `(font-lock-builtin-face ((,class (:foreground ,builtin))))
         `(font-lock-comment-face ((,class (:foreground ,comment))))
@@ -66,7 +65,7 @@
         `(region ((,class (:background ,fg1 :foreground ,bg1))))
         `(highlight ((,class (:foreground ,fg3 :background ,bg3))))
 	`(hl-line ((,class (:background  ,bg2))))
-	`(fringe ((,class (:background ,bg2 :foreground ,fg4))))
+	`(fringe ((,class (:background ,bg01 :foreground ,fg2))))
 	`(cursor ((,class (:background ,bg3))))
         `(show-paren-match-face ((,class (:background ,warning))))
         `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
@@ -246,10 +245,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme '{{.Themename}})
+(provide-theme '{{ThemeMap.name}})
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; {{.Themename}}-theme.el ends here
+;;; {{ThemeMap.name}}-theme.el ends here
