@@ -7,6 +7,7 @@ use std::fmt::Formatter;
 use std::collections::HashMap;
 
 pub struct ThemeMap {
+    pub name: String,
     pub author: String,
     pub dark_bg: bool,
     pub fg1: ThemeColor,
@@ -50,6 +51,7 @@ impl ThemeMap {
             )
         };
         ThemeMap{
+            name: "".to_string(),
             author: "".to_string(),
             dark_bg: bg.is_dark_bg(),
             fg1: fg,
