@@ -7,6 +7,7 @@ use std::fmt::Formatter;
 use std::collections::HashMap;
 
 pub struct ThemeMap {
+    pub author: String,
     pub dark_bg: bool,
     pub fg1: ThemeColor,
     pub fg2: ThemeColor,
@@ -49,6 +50,7 @@ impl ThemeMap {
             )
         };
         ThemeMap{
+            author: "".to_string(),
             dark_bg: bg.is_dark_bg(),
             fg1: fg,
             bg1: bg,
@@ -72,7 +74,7 @@ impl ThemeMap {
     }
 }
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct ThemeColor {
     pub col: Srgb<u8>,
 }
@@ -189,7 +191,6 @@ mod test {
     use super::*;
     use std::fmt::Debug;
 
-    extern crate approx;
 
     #[test]
     fn from_str() {
