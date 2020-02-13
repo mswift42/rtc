@@ -35,7 +35,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{.Comment}}</string>
+				<string>{{ThemeMap.comment}}</string>
 			</dict>
 		</dict>
 		<dict>

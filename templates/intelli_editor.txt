@@ -47,7 +47,7 @@
     </option>
     <option name="APACHE_CONFIGCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -122,7 +122,7 @@
     </option>
     <option name="BASH.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -195,7 +195,7 @@
     </option>
     <option name="BREADCRUMBS_INACTIVE">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="BREAKPOINT_ATTRIBUTES">
@@ -211,7 +211,7 @@
     </option>
     <option name="BUILDOUT.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -228,7 +228,7 @@
     </option>
     <option name="Block comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -243,7 +243,7 @@
     </option>
     <option name="COFFEESCRIPT.BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -329,7 +329,7 @@
     </option>
     <option name="COFFEESCRIPT.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -489,7 +489,7 @@
     </option>
     <option name="CSSCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -579,13 +579,13 @@
     </option>
     <option name="CUSTOM_LINE_COMMENT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="CUSTOM_MULTI_LINE_COMMENT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -623,7 +623,7 @@
     </option>
     <option name="Clojure Line comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -646,7 +646,7 @@
     </option>
     <option name="CmdCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -708,7 +708,7 @@
     </option>
     <option name="DARTCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -745,7 +745,7 @@
     </option>
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -775,7 +775,7 @@
     </option>
     <option name="DEFAULT_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
@@ -832,7 +832,7 @@
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -950,7 +950,7 @@
     {{/hasdarkbg}}
     <option name="DJANGO_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -985,7 +985,7 @@
     </option>
     <option name="DOC_COMMENT_TAG_VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="DUPLICATE_FROM_SERVER">
@@ -1160,7 +1160,7 @@
     </option>
     <option name="GHERKIN_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1238,7 +1238,7 @@
     </option>
     <option name="Groovydoc comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="Groovydoc tag">
@@ -1254,7 +1254,7 @@
     </option>
     <option name="HAML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="HAML_FILTER">
@@ -1313,7 +1313,7 @@
     </option>
     <option name="HTML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="HTML_ENTITY_REFERENCE">
@@ -1431,13 +1431,13 @@
     </option>
     <option name="JAVA_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="JAVA_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="JAVA_DOC_TAG">
@@ -1459,7 +1459,7 @@
     </option>
     <option name="JAVA_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1480,7 +1480,7 @@
     </option>
     <option name="JFLEXCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1570,7 +1570,7 @@
     </option>
     <option name="JS.BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1586,7 +1586,7 @@
     </option>
     <option name="JSCONSTANT_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1636,7 +1636,7 @@
     </option>
     <option name="JS.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1699,7 +1699,7 @@
     </option>
     <option name="JSP_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1730,7 +1730,7 @@
     </option>
     <option name="KOTLIN_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1752,7 +1752,7 @@
     </option>
     <option name="KOTLIN_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1778,7 +1778,7 @@
     </option>
     <option name="KOTLIN_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1863,7 +1863,7 @@
     </option>
     <option name="LOCALE.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1949,7 +1949,7 @@
     </option>
     <option name="LUA_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1966,13 +1966,13 @@
     </option>
     <option name="LUA_LONGCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="LUA_LONGCOMMENT_BRACES">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2070,7 +2070,7 @@
     </option>
     <option name="MAKO.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2247,7 +2247,7 @@
     </option>
     <option name="OC.BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2283,7 +2283,7 @@
     </option>
     <option name="OC.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2350,7 +2350,7 @@
     </option>
     <option name="PHP_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2362,7 +2362,7 @@
     </option>
     <option name="PHP_DOC_COMMENT_ID">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2440,7 +2440,7 @@
     </option>
     <option name="PROPERTIES.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="PROPERTIES.VALID_STRING_ESCAPE">
@@ -2467,7 +2467,7 @@
     </option>
     <option name="PROPS.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2531,7 +2531,7 @@
     </option>
     <option name="PYCONSTANT_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2555,7 +2555,7 @@
     </option>
     <option name="PY.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2698,7 +2698,7 @@
     </option>
     <option name="REGEXPCOMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="REGEXP.ESC_CHARACTER">
@@ -2778,7 +2778,7 @@
     </option>
     <option name="REST.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2799,7 +2799,7 @@
     </option>
     <option name="RUBY_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2936,7 +2936,7 @@
     </option>
     <option name="SASS_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="SASS_CONSTANT">
@@ -3016,7 +3016,7 @@
     </option>
     <option name="SOYCONSTANT_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3124,7 +3124,7 @@
     </option>
     <option name="SQL_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3221,7 +3221,7 @@
     </option>
     <option name="Scala Block comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3248,7 +3248,7 @@
     </option>
     <option name="Scala Line comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3345,7 +3345,7 @@
     </option>
     <option name="ScalaDoc comment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3391,7 +3391,7 @@
     </option>
     <option name="TEA.BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3409,7 +3409,7 @@
     </option>
     <option name="TEA.LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3482,7 +3482,7 @@
     </option>
     <option name="TWIG_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3635,7 +3635,7 @@
     </option>
     <option name="XML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
       </value>
     </option>
     <option name="XML_ENTITY_REFERENCE">
@@ -3693,7 +3693,7 @@
     </option>
     <option name="YAML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3728,14 +3728,14 @@
     </option>
     <option name="bemhtml.bem.mlcomment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
     <option name="bemhtml.bem.slcomment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3785,7 +3785,7 @@
     </option>
     <option name="go.blockcomment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3809,7 +3809,7 @@
     </option>
     <option name="go.linecomment">
       <value>
-        <option name="FOREGROUND" value="{{.Comment}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.comment}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>

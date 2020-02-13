@@ -266,7 +266,7 @@
       "lightSelectionForeground": "{{ThemeMap.fg1}}",
       "lightSelectionInactiveForeground": "{{ThemeMap.fg1}}",
       "lightSelectionBackground": "{{ThemeMap.bg2}}",
-      "lightSelectionInactiveBackground": "{{.Comment}}"
+      "lightSelectionInactiveBackground": "{{ThemeMap.comment}}"
     },
     "ToggleButton": {
       "onForeground": "{{ThemeMap.fg1}}",
