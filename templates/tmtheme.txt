@@ -98,7 +98,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.String}}</string>
+				<string>{{ThemeMap.string}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -198,7 +198,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{.String}}</string>
+				<string>{{ThemeMap.string}}</string>
 			</dict>
 		</dict>
 		<dict>

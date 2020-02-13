@@ -26,11 +26,11 @@ let s:builtin="{{.Builtin}}"
 let s:const= "{{ThemeMap.constant}}"
 let s:comment="{{.Comment}}"
 let s:func="{{ThemeMap.func}}"
-let s:str="{{.String}}"
+let s:str="{{ThemeMap.string}}"
 let s:type="{{ThemeMap.typeface}}"
 let s:var="{{.Variable}}"
-let s:warning="{{.Warning}}"
-let s:warning2="{{.Warning2}}"
+let s:warning="{{ThemeMap.warning}}"
+let s:warning2="{{ThemeMap.warning2}}"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg 
 exe 'hi Cursor guifg='s:bg' guibg='s:fg 

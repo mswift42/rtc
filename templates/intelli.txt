@@ -14,7 +14,7 @@
       "selectionInactiveBackground": "{{ThemeMap.bg2}}",
       "acceleratorForeground": "{{ThemeMap.fg1}}",
       "acceleratorSelectionForeground": "{{ThemeMap.fg1}}",
-      "errorForeground": "{{.Warning}}",
+      "errorForeground": "{{ThemeMap.warning}}",
       "borderColor": "{{.Bg4}}",
       "disabledBorderColor": "{{ThemeMap.bg2}}",
       "focusColor": "{{ThemeMap.keyword}}",
@@ -60,7 +60,7 @@
       "nonFocusedState": "{{ThemeMap.bg2}}",
       "selectionInactiveBackground": "{{ThemeMap.bg2}}",
       "selectionInfoForeground": {{if .DarkBG}}"#eaeaea"{{else}}"#202020"{{end}},
-      "selectionInactiveInfoForeground": "{{.String}}"
+      "selectionInactiveInfoForeground": "{{ThemeMap.string}}"
     },
     "Component": {
       "errorFocusColor": "{{.InvWarning}}",
@@ -125,7 +125,7 @@
       "background": "{{ThemeMap.bg2}}",
       "borderColor": "{{ThemeMap.fg2}}"
     },
-    "Label.selectedDisabledForeground": "{{.Warning2}}",
+    "Label.selectedDisabledForeground": "{{ThemeMap.warning2}}",
     "Link": {
       "activeForeground": "{{ThemeMap.constant}}",
       "hoverForeground": "{{ThemeMap.constant}}",
@@ -137,7 +137,7 @@
       "background": "{{ThemeMap.bg1}}",
       "errorForeground": "{{ThemeMap.fg1}}",
       "errorBackground": "{{.InvWarning}}",
-      "errorBorderColor": "{{.Warning}}",
+      "errorBorderColor": "{{ThemeMap.warning}}",
       "MoreButton.innerBorderColor": "{{ThemeMap.bg1}}",
       "ToolWindow": {
         "informativeForeground": "{{ThemeMap.fg1}}",
@@ -145,10 +145,10 @@
         "informativeBorderColor": "{{ThemeMap.fg2}}",
         "warningForeground": "{{ThemeMap.fg1}}",
         "warningBackground": "{{.InvWarning2}}",
-        "warningBorderColor": "{{.Warning}}",
+        "warningBorderColor": "{{ThemeMap.warning}}",
         "errorForeground": "{{ThemeMap.fg1}}",
         "errorBackground": "{{.InvWarning}}",
-        "errorBorderColor": "{{.Warning}}"
+        "errorBorderColor": "{{ThemeMap.warning}}"
       }
     },
     "ParameterInfo": {
@@ -200,7 +200,7 @@
       "progressColor": "{{ThemeMap.fg1}}",
       "indeterminateStartColor": "{{ThemeMap.fg1}}",
       "indeterminateEndColor": "{{ThemeMap.bg2}}",
-      "failedColor": "{{.Warning}}",
+      "failedColor": "{{ThemeMap.warning}}",
       "failedEndColor": "{{.InvWarning}}",
       "passedColor": "{{ThemeMap.keyword}}",
       "passedEndColor": "{{.InvKeyword}}"
@@ -299,14 +299,14 @@
     },
     "ValidationTooltip": {
       "errorBackground": "{{.InvWarning}}",
-      "errorBorderColor": "{{.Warning}}",
+      "errorBorderColor": "{{ThemeMap.warning}}",
       "warningBackground": "{{.InvWarning2}}",
-      "warningBorderColor": "{{.Warning}}"
+      "warningBorderColor": "{{ThemeMap.warning}}"
     },
     "VersionControl": {
       "Log.Commit": {
         "currentBranchBackground": "{{ThemeMap.bg2}}",
-        "unmatchedForeground": "{{.Warning2}}"
+        "unmatchedForeground": "{{ThemeMap.warning2}}"
       },
       "RefLabel": {
         "backgroundBase": "{{.Bg3}}",
