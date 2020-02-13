@@ -5,10 +5,10 @@
 # https://github.com/chriskempson/base16-gnome-terminal/blob/master/base16-3024.dark.sh
 # Created with ThemeCreator, https://github.com/mswift42/themecreator
 
-# Author: {{themeauthor}}
+# Author: {{ThemeMap.author}}
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="{{themename}}" 
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="{{themename}}" 
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="{{ThemeMap.name}}" 
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="{{ThemeMap.name}}" 
 [[ -z "$DCONF" ]] && DCONF=dconf 
 [[ -z "$UUIDGEN" ]] && UUIDGEN=uuidgen 
 
