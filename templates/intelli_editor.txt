@@ -8,28 +8,28 @@
     <option name="ANNOTATIONS_COLOR" value="{{.Fg3}}" />
     <option name="ANNOTATIONS_MERGED_COLOR" value="{{.Fg3}}" />
     <option name="CARET_COLOR" value="{{.Fg2}}" />
-    <option name="CARET_ROW_COLOR" value="{{.Bg2}}" />
-    <option name="CONSOLE_BACKGROUND_KEY" value="{{.Bg1}}" />
+    <option name="CARET_ROW_COLOR" value="{{ThemeMap.bg2}}" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="{{ThemeMap.bg1}}" />
     <option name="FILESTATUS_ADDED" value="{{.Keyword}}"/>
     <option name="FILESTATUS_COPIED" value="{{.Fg2}}"/>
     <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{{.Constant}}"/>
     <option name="FILESTATUS_RENAMED" value="{{.Func}}"/>
     <option name="FILESTATUS_MODIFIED" value="{{.String}}"/>
     <option name="FILESTATUS_UNKNOWN" value="{{.Type}}"/>
-    <option name="GUTTER_BACKGROUND" value="{{.Bg2}}" />
-    <option name="INDENT_GUIDE" value="{{.Bg2}}" />
+    <option name="GUTTER_BACKGROUND" value="{{ThemeMap.bg2}}" />
+    <option name="INDENT_GUIDE" value="{{ThemeMap.bg2}}" />
     <option name="LINE_NUMBERS_COLOR" value="{{.Fg2}}" />
-    <option name="METHOD_SEPARATORS_COLOR" value="{{.Bg2}}" />
+    <option name="METHOD_SEPARATORS_COLOR" value="{{ThemeMap.bg2}}" />
     <option name="MODIFIED_LINES_COLOR" value="bccff9" />
-    <option name="NOTIFICATION_BACKGROUND" value="{{.Bg1}}" />
+    <option name="NOTIFICATION_BACKGROUND" value="{{ThemeMap.bg1}}" />
     <option name="READONLY_FRAGMENT_BACKGROUND" value="" />
-    <option name="RIGHT_MARGIN_COLOR" value="{{.Bg2}}" />
+    <option name="RIGHT_MARGIN_COLOR" value="{{ThemeMap.bg2}}" />
     <option name="SELECTED_INDENT_GUIDE" value="{{.Fg2}}" />
     <option name="SELECTED_TEARLINE_COLOR" value="{{.Keyword}}" />
-    <option name="SELECTION_BACKGROUND" value="{{.Bg2}}" />
+    <option name="SELECTION_BACKGROUND" value="{{ThemeMap.bg2}}" />
     <option name="SELECTION_FOREGROUND" value="{{.Fg2}}" />
-    <option name="SEPARATOR_BELOW_COLOR" value="{{.Bg2}}"/>
-    <option name="SEPARATOR_ABOVE_COLOR" value="{{.Bg2}}"/>
+    <option name="SEPARATOR_BELOW_COLOR" value="{{ThemeMap.bg2}}"/>
+    <option name="SEPARATOR_ABOVE_COLOR" value="{{ThemeMap.bg2}}"/>
     <option name="TEARLINE_COLOR" value="{{.Fg2}}" />
     <option name="WHITESPACES" value="{{.Fg2}}" />
   </colors>
@@ -200,7 +200,7 @@
     </option>
     <option name="BREAKPOINT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="BUILDOUT.KEY">
@@ -237,7 +237,7 @@
     </option>
     <option name="COFFEESCRIPT.BAD_CHARACTER">
       <value>
-        <option name="FOREGROUND" value="{{.Bg2}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg2}}" />
         <option name="BACKGROUND" value="{{.Constant}}" />
       </value>
     </option>
@@ -269,7 +269,7 @@
     </option>
     <option name="COFFEESCRIPT.EXPRESSIONS_SUBSTITUTION_MARK">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="COFFEESCRIPT.FUNCTION">
@@ -313,7 +313,7 @@
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_ID">
@@ -875,7 +875,7 @@
     </option>
     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
@@ -886,7 +886,7 @@
     <option name="DELETED_TEXT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="{{.Fg1}}" />
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1106,7 +1106,7 @@
     </option>
     <option name="EL_BACKGROUND">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="ENUM_CONST">
@@ -1124,14 +1124,14 @@
     </option>
     <option name="EXECUTIONPOINT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Bg1}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg1}}" />
         <option name="BACKGROUND" value="{{.Fg3}}" />
       </value>
     </option>
     <option name="FOLDED_TEXT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="{{.Fg2}}" />
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1264,7 +1264,7 @@
     </option>
     <option name="HAML_FILTER_CONTENT">
       <value>
-        <option name="FOREGROUND" value="{{.Bg2}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg2}}" />
         <option name="BACKGROUND" value="{{.Fg3}}" />
       </value>
     </option>
@@ -1342,8 +1342,8 @@
     </option>
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
-        <option name="ERROR_STRIPE_COLOR" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
+        <option name="ERROR_STRIPE_COLOR" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
@@ -1358,7 +1358,7 @@
     </option>
     <option name="INJECTED_LANGUAGE_FRAGMENT">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="INLINE_PARAMETER_HINT">
@@ -1592,7 +1592,7 @@
     </option>
     <option name="JSCONSTANT_MARKUP">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="JSCONSTANT_TAG">
@@ -1847,7 +1847,7 @@
     <option name="LESS_INJECTED_CODE">
       <value>
         <option name="FOREGROUND" value="{{.String}}" />
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="LESS_JS_CODE_DELIM">
@@ -2076,7 +2076,7 @@
     </option>
     <option name="MAKO.SUBSTITUTION">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2099,7 +2099,7 @@
     </option>
     <option name="MARKDOWN.BLOCK_QUOTE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2111,7 +2111,7 @@
     </option>
     <option name="MARKDOWN.CODE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2165,7 +2165,7 @@
     </option>
     <option name="MARKDOWN.HRULE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -2196,7 +2196,7 @@
     </option>
     <option name="MARKDOWN.QUOTE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2208,20 +2208,20 @@
     </option>
     <option name="MARKDOWN.TABLE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
     <option name="MARKDOWN.VERBATIM">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="{{.Fg2}}" />
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="MESSAGE_ARGUMENT">
@@ -2759,7 +2759,7 @@
     </option>
     <option name="REST.INLINE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2993,13 +2993,13 @@
     </option>
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
     <option name="SMARTY_IDENTIFIER">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="SOY.BAD">
@@ -3083,7 +3083,7 @@
     </option>
     <option name="SPY-JS.FUNCTION_SCOPE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
@@ -3101,7 +3101,7 @@
     </option>
     <option name="SPY-JS.PROGRAM_SCOPE">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
@@ -3450,12 +3450,12 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="{{.Fg1}}" />
-        <option name="BACKGROUND" value="{{.Bg1}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg1}}" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Bg2}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg2}}" />
         <option name="BACKGROUND" value="{{.Func}}" />
         <option name="ERROR_STRIPE_COLOR" value="{{.Warning}}" />
       </value>
@@ -3561,7 +3561,7 @@
     </option>
     <option name="UNMATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Bg1}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg1}}" />
         <option name="BACKGROUND" value="{{.Warning2}}" />
       </value>
     </option>
@@ -3586,20 +3586,20 @@
     <option name="WARNING_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="{{.Fg3}}" />
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="1" />
         <option name="ERROR_STRIPE_COLOR" value="{{.Warning}}" />
       </value>
     </option>
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
-        <option name="ERROR_STRIPE_COLOR" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
+        <option name="ERROR_STRIPE_COLOR" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
@@ -3711,7 +3711,7 @@
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
-        <option name="BACKGROUND" value="{{.Bg2}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg2}}" />
       </value>
     </option>
     <option name="YAML_SCALAR_STRING">

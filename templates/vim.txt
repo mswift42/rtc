@@ -13,12 +13,12 @@ let g:colors_name = "{{.Themename}}"
 
 
 " Define reusable colorvariables.
-let s:bg="{{.Bg1}}"
+let s:bg="{{ThemeMap.bg1}}"
 let s:fg="{{.Fg1}}"
 let s:fg2="{{.Fg2}}"
 let s:fg3="{{.Fg3}}"
 let s:fg4="{{.Fg4}}"
-let s:bg2="{{.Bg2}}"
+let s:bg2="{{ThemeMap.bg2}}"
 let s:bg3="{{.Bg3}}"
 let s:bg4="{{.Bg4}}"
 let s:keyword="{{.Keyword}}"
