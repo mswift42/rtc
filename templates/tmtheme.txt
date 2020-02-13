@@ -18,7 +18,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>caret</key>
 				<string>{{.Bg3}}</string>
 				<key>foreground</key>
-				<string>{{.Fg1}}</string>
+				<string>{{ThemeMap.fg1}}</string>
 				<key>invisibles</key>
 				<string>{{.Bg3}}</string>
 				<key>lineHighlight</key>
@@ -122,7 +122,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.Func}}</string>
+				<string>{{ThemeMap.func}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -150,7 +150,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.Fg1}}</string>
+				<string>{{ThemeMap.fg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -161,7 +161,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{.Fg1}}</string>
+				<string>{{ThemeMap.fg1}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -222,7 +222,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>foreground</key>
 				<string>{{ThemeMap.bg1}}</string>
 				<key>background</key>
-				<string>{{.Func}}</string>
+				<string>{{ThemeMap.func}}</string>
 			</dict>
 		</dict>
 		<dict>
