@@ -85,7 +85,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.Type}}</string>
+				<string>{{ThemeMap.typeface}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -109,7 +109,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{.Keyword}}</string>
+				<string>{{ThemeMap.keyword}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -135,7 +135,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>{{.Keyword}}</string>
+				<string>{{ThemeMap.keyword}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -235,7 +235,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>{{.Keyword}}</string>
+				<string>{{ThemeMap.keyword}}</string>
 			</dict>
 		</dict>
 	</array>

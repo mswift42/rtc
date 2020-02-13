@@ -9,7 +9,7 @@
       "foreground": "{{ThemeMap.fg1}}",
       "inactiveBackground": "{{ThemeMap.bg2}}",
       "disabledBackground": "{{ThemeMap.bg2}}",
-      "selectionBackground": "{{.Keyword}}",
+      "selectionBackground": "{{ThemeMap.keyword}}",
       "selectionForeground": {{if .DarkBG}}"#000000"{{else}}"#ffffff"{{end}},
       "selectionInactiveBackground": "{{ThemeMap.bg2}}",
       "acceleratorForeground": "{{ThemeMap.fg1}}",
@@ -17,15 +17,15 @@
       "errorForeground": "{{.Warning}}",
       "borderColor": "{{.Bg4}}",
       "disabledBorderColor": "{{ThemeMap.bg2}}",
-      "focusColor": "{{.Keyword}}",
-      "focusedBorderColor": "{{.Keyword}}",
+      "focusColor": "{{ThemeMap.keyword}}",
+      "focusedBorderColor": "{{ThemeMap.keyword}}",
       "separatorColor": "{{.Bg4}}"
     },
     "ActionButton": {
       "hoverBackground": "{{ThemeMap.bg2}}",
       "pressedBackground": "{{ThemeMap.bg1}}",
-      "hoverBorderColor": "{{.Keyword}}",
-      "pressedBorderColor": "{{.Keyword}}"
+      "hoverBorderColor": "{{ThemeMap.keyword}}",
+      "pressedBorderColor": "{{ThemeMap.keyword}}"
     },
     "Button": {
       "startBackground": "{{ThemeMap.bg2}}",
@@ -55,7 +55,7 @@
     },
     "ComboPopup.border": "1,1,1,1,{{ThemeMap.bg2}}",
     "CompletionPopup": {
-      "matchForeground": "{{.Keyword}}",
+      "matchForeground": "{{ThemeMap.keyword}}",
       "matchSelectionForeground": {{if .DarkBG}}"#ffffff"{{else}}"#000000"{{end}},
       "nonFocusedState": "{{ThemeMap.bg2}}",
       "selectionInactiveBackground": "{{ThemeMap.bg2}}",
@@ -202,7 +202,7 @@
       "indeterminateEndColor": "{{ThemeMap.bg2}}",
       "failedColor": "{{.Warning}}",
       "failedEndColor": "{{.InvWarning}}",
-      "passedColor": "{{.Keyword}}",
+      "passedColor": "{{ThemeMap.keyword}}",
       "passedEndColor": "{{.InvKeyword}}"
     },
     "ScrollBar": {
