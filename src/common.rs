@@ -24,6 +24,7 @@ pub struct ThemeMap {
     pub func: ThemeColor,
     pub typeface: ThemeColor,
     pub string: ThemeColor,
+    pub variable: ThemeColor,
     pub warning: ThemeColor,
     pub warning2: ThemeColor,
 }
@@ -68,6 +69,7 @@ impl ThemeMap {
             func: cm["functionname"].clone(),
             typeface: cm["typeface"].clone(),
             string: cm["string"].clone(),
+            variable: cm["variable"].clone(),
             warning: cm["warning"].clone(),
             warning2: cm["warning2"].clone(),
 
