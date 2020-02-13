@@ -127,10 +127,10 @@
     },
     "Label.selectedDisabledForeground": "{{.Warning2}}",
     "Link": {
-      "activeForeground": "{{.Constant}}",
-      "hoverForeground": "{{.Constant}}",
-      "pressedForeground": "{{.Constant}}",
-      "visitedForeground": "{{.Constant}}"
+      "activeForeground": "{{ThemeMap.constant}}",
+      "hoverForeground": "{{ThemeMap.constant}}",
+      "pressedForeground": "{{ThemeMap.constant}}",
+      "visitedForeground": "{{ThemeMap.constant}}"
     },
     "NavBar.borderColor": "{{ThemeMap.fg1}}",
     "Notification": {

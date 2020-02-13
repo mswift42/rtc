@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Color Theme {{.Themename}}, created by {{.Author}} .
+<!-- Color Theme {{ThemeMap.name}}, created by {{.Author}} .
 Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 <plist version="1.0">
 <dict>
 	<key>author</key>
 	<string>{{.Author}}</string>
 	<key>name</key>
-	<string>{{.Themename}}</string>
+	<string>{{ThemeMap.name}}</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -48,7 +48,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.Constant}}</string>
+				<string>{{ThemeMap.constant}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -72,7 +72,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>{{.Constant}}</string>
+				<string>{{ThemeMap.constant}}</string>
 			</dict>
 		</dict>
 		<dict>

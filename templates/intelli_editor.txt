@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scheme name="{{.Themename}}" version="142" parent_scheme="Default">
+<scheme name="{{ThemeMap.name}}" version="142" parent_scheme="Default">
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="13" />
   <option name="EDITOR_FONT_NAME" value="Source Code Pro 13" />
@@ -12,7 +12,7 @@
     <option name="CONSOLE_BACKGROUND_KEY" value="{{ThemeMap.bg1}}" />
     <option name="FILESTATUS_ADDED" value="{{ThemeMap.keyword}}"/>
     <option name="FILESTATUS_COPIED" value="{{ThemeMap.fg2}}"/>
-    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{{.Constant}}"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{{ThemeMap.constant}}"/>
     <option name="FILESTATUS_RENAMED" value="{{ThemeMap.func}}"/>
     <option name="FILESTATUS_MODIFIED" value="{{.String}}"/>
     <option name="FILESTATUS_UNKNOWN" value="{{ThemeMap.typeface}}"/>
@@ -238,7 +238,7 @@
     <option name="COFFEESCRIPT.BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="{{ThemeMap.bg2}}" />
-        <option name="BACKGROUND" value="{{.Constant}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="COFFEESCRIPT.BLOCK_COMMENT">
@@ -264,7 +264,7 @@
     </option>
     <option name="COFFEESCRIPT.ESCAPE_SEQUENCE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="COFFEESCRIPT.EXPRESSIONS_SUBSTITUTION_MARK">
@@ -318,7 +318,7 @@
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_ID">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -606,7 +606,7 @@
     </option>
     <option name="Clojure Atom">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="Clojure Character">
@@ -760,7 +760,7 @@
     </option>
     <option name="DEFAULT_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
@@ -838,7 +838,7 @@
     </option>
     <option name="DEFAULT_METADATA">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">
@@ -862,7 +862,7 @@
     </option>
     <option name="DEFAULT_STATIC_FIELD">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="DEFAULT_STRING">
@@ -968,7 +968,7 @@
     </option>
     <option name="DJANGO_NUMBER">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="DJANGO_STRING_LITERAL">
@@ -999,7 +999,7 @@
     </option>
     <option name="ECMAL4.ATTRIBUTE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="0" />
       </value>
     </option>
@@ -1073,7 +1073,7 @@
     </option>
     <option name="ECMAL4.STATIC_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="0" />
       </value>
     </option>
@@ -1111,7 +1111,7 @@
     </option>
     <option name="ENUM_CONST">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1143,7 +1143,7 @@
     </option>
     <option name="First symbol in list">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1203,7 +1203,7 @@
     </option>
     <option name="GHERKIN_TAG">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="GQL_ID">
@@ -1211,7 +1211,7 @@
     </option>
     <option name="GQL_INT_LITERAL">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="GQL_KEYWORD">
@@ -1283,7 +1283,7 @@
     </option>
     <option name="HAML_RUBY_START">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="HAML_TAG">
@@ -1363,7 +1363,7 @@
     </option>
     <option name="INLINE_PARAMETER_HINT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES">
@@ -1465,7 +1465,7 @@
     </option>
     <option name="JAVA_NUMBER">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="JAVA_STRING">
@@ -1475,7 +1475,7 @@
     </option>
     <option name="JAVA_VALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="JFLEXCOMMENT">
@@ -1499,7 +1499,7 @@
     </option>
     <option name="JFLEX.OPTION_SIGN">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1526,7 +1526,7 @@
     </option>
     <option name="JFLEX_MACROS_REF">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1717,7 +1717,7 @@
     </option>
     <option name="KOTLIN_ANNOTATION">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1828,7 +1828,7 @@
     </option>
     <option name="KOTLIN_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1899,7 +1899,7 @@
     </option>
     <option name="LOGCAT_ASSERT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="LOGCAT_DEBUG_OUTPUT">
@@ -1944,7 +1944,7 @@
     </option>
     <option name="LUA_BAD_CHARACTER">
       <value>
-        <option name="BACKGROUND" value="{{.Constant}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="LUA_COMMENT">
@@ -2030,7 +2030,7 @@
     </option>
     <option name="Local lazy val/var">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="Local value">
@@ -2328,7 +2328,7 @@
     </option>
     <option name="OVERLOADED_OPERATOR">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -2340,7 +2340,7 @@
     </option>
     <option name="PARAMETER_HINT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="PHP_BRACKETS">
@@ -2356,7 +2356,7 @@
     </option>
     <option name="PHP_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2406,7 +2406,7 @@
     </option>
     <option name="PHP_PREDEFINED SYMBOL">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="PHP_SCRIPTING_BACKGROUND">
@@ -2543,7 +2543,7 @@
     </option>
     <option name="PY.INVALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_COLOR" value="ffffff" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
@@ -2600,7 +2600,7 @@
     </option>
     <option name="PY.VALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="Predefined types">
@@ -2623,7 +2623,7 @@
     </option>
     <option name="QL_DATETIME">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="QL_ENTITY">
@@ -2693,7 +2693,7 @@
     </option>
     <option name="REGEXP.COMMA">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="REGEXPCOMMENT">
@@ -2703,7 +2703,7 @@
     </option>
     <option name="REGEXP.ESC_CHARACTER">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="REGEXP.INVALID_STRING_ESCAPE">
@@ -2805,12 +2805,12 @@
     </option>
     <option name="RUBY_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="RUBY_CONSTANT_DECLARATION">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="RUBY_CVAR">
@@ -2836,7 +2836,7 @@
     </option>
     <option name="RUBY_EXPR_IN_STRING">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="RUBY_GVAR">
@@ -3030,7 +3030,7 @@
     <option name="SOY.IGNORE">
       <value>
         <option name="FOREGROUND" value="{{ThemeMap.fg3}}" />
-        <option name="BACKGROUND" value="{{.Constant}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="SOYKEYWORD">
@@ -3064,7 +3064,7 @@
     </option>
     <option name="SOY.TEMPLATE_ID">
       <value>
-        <option name="EFFECT_COLOR" value="{{.Constant}}" />
+        <option name="EFFECT_COLOR" value="{{ThemeMap.constant}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -3141,7 +3141,7 @@
     </option>
     <option name="SQL_LABEL">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="SQL_LOCAL_ALIAS">
@@ -3312,7 +3312,7 @@
     </option>
     <option name="Scala Template var">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -3358,7 +3358,7 @@
     </option>
     <option name="Special symbol">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -3375,7 +3375,7 @@
     </option>
     <option name="Static property reference ID">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="String">
@@ -3386,7 +3386,7 @@
     <option name="TEA.BADCHARACTER">
       <value>
         <option name="FOREGROUND" value="{{.Bg3}}" />
-        <option name="BACKGROUND" value="{{.Constant}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="TEA.BLOCK_COMMENT">
@@ -3398,7 +3398,7 @@
     <option name="TEA.INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="{{.Bg3}}" />
-        <option name="BACKGROUND" value="{{.Constant}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="TEAKEYWORD">
@@ -3640,7 +3640,7 @@
     </option>
     <option name="XML_ENTITY_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="{{.Constant}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
     <option name="XML_PROLOGUE">
