@@ -15,11 +15,11 @@
       "acceleratorForeground": "{{ThemeMap.fg1}}",
       "acceleratorSelectionForeground": "{{ThemeMap.fg1}}",
       "errorForeground": "{{ThemeMap.warning}}",
-      "borderColor": "{{.Bg4}}",
+      "borderColor": "{{ThemeMap.bg4}}",
       "disabledBorderColor": "{{ThemeMap.bg2}}",
       "focusColor": "{{ThemeMap.keyword}}",
       "focusedBorderColor": "{{ThemeMap.keyword}}",
-      "separatorColor": "{{.Bg4}}"
+      "separatorColor": "{{ThemeMap.bg4}}"
     },
     "ActionButton": {
       "hoverBackground": "{{ThemeMap.bg2}}",
@@ -30,8 +30,8 @@
     "Button": {
       "startBackground": "{{ThemeMap.bg2}}",
       "endBackground": "{{ThemeMap.bg2}}",
-      "startBorderColor": "{{.Bg3}}",
-      "endBorderColor": "{{.Bg3}}",
+      "startBorderColor": "{{ThemeMap.bg3}}",
+      "endBorderColor": "{{ThemeMap.bg3}}",
       "default": {
         "foreground": "{{ThemeMap.fg1}}",
         "startBackground": "{{ThemeMap.bg2}}",
@@ -42,14 +42,14 @@
       }
     },
     "Borders": {
-      "color": "{{.Bg4}}",
-      "ContrastBorderColor": "{{.Bg4}}"
+      "color": "{{ThemeMap.bg4}}",
+      "ContrastBorderColor": "{{ThemeMap.bg4}}"
     },
     "ComboBox": {
-      "nonEditableBackground": "{{.Bg4}}",
+      "nonEditableBackground": "{{ThemeMap.bg4}}",
       "ArrowButton": {
         "iconColor": "{{ThemeMap.fg1}}",
-        "disabledIconColor": "{{.Bg4}}",
+        "disabledIconColor": "{{ThemeMap.bg4}}",
         "nonEditableBackground": "{{ThemeMap.bg2}}"
       }
     },
@@ -74,7 +74,7 @@
       "background": "{{ThemeMap.fg1}}",
       "foreground": "{{.Bg01}}"
     },
-    "DebuggerPopup.borderColor": "{{.Bg4}}",
+    "DebuggerPopup.borderColor": "{{ThemeMap.bg4}}",
     "DebuggerTabs.selectedBackground": "{{.Bg01}}",
     "DragAndDrop": {
       "areaForeground": "{{ThemeMap.fg1}}  ",
@@ -84,7 +84,7 @@
     "Editor": {
       "background": "{{ThemeMap.bg2}}",
       "foreground": "{{ThemeMap.fg1}}",
-      "shortcutForeground": "{{.Bg4}}"
+      "shortcutForeground": "{{ThemeMap.bg4}}"
     },
     "EditorPane.inactiveBackground": "{{ThemeMap.bg1}}",
     "EditorTabs": {
@@ -103,17 +103,17 @@
     },
      "FlameGraph": {
       "JVMBackground": "{{ThemeMap.fg2}}",
-      "JVMSearchNotMatchedBackground": "{{.Bg4}}",
+      "JVMSearchNotMatchedBackground": "{{ThemeMap.bg4}}",
       "nativeBackground": "{{ThemeMap.fg1}}",
-      "nativeSearchNotMatchedBackground": "{{.Bg3}}",
+      "nativeSearchNotMatchedBackground": "{{ThemeMap.bg3}}",
       "parentBackground": "{{ThemeMap.fg1}}",
-      "parentSearchNotMatchedBackground": "{{.Bg3}}",
-      "JVMFocusBackground": "{{.Bg3}}",
-      "JVMFocusSearchNotMatchedBackground": "{{.Bg3}}",
-      "nativeFocusBackground": "{{.Bg3}}",
-      "nativeFocusSearchNotMatchedBackground": "{{.Bg3}}",
-      "parentFocusBackground": "{{.Bg3}}",
-      "parentFocusSearchNotMatchedBackground": "{{.Bg3}}",
+      "parentSearchNotMatchedBackground": "{{ThemeMap.bg3}}",
+      "JVMFocusBackground": "{{ThemeMap.bg3}}",
+      "JVMFocusSearchNotMatchedBackground": "{{ThemeMap.bg3}}",
+      "nativeFocusBackground": "{{ThemeMap.bg3}}",
+      "nativeFocusSearchNotMatchedBackground": "{{ThemeMap.bg3}}",
+      "parentFocusBackground": "{{ThemeMap.bg3}}",
+      "parentFocusSearchNotMatchedBackground": "{{ThemeMap.bg3}}",
       "JVMFrameForeground": "{{ThemeMap.bg1}}",
       "nativeFrameForeground": "{{ThemeMap.bg1}}",
       "parentFrameForeground": "{{ThemeMap.bg1}}",
@@ -156,13 +156,13 @@
       "foreground": "{{ThemeMap.fg2}}",
       "currentOverloadBackground": "{{ThemeMap.bg2}}",
       "currentParameterForeground": "{{ThemeMap.fg1}}",
-      "lineSeparatorColor": "{{.Bg4}}"
+      "lineSeparatorColor": "{{ThemeMap.bg4}}"
     },
     "Plugins": {
       "Tab": {
         "selectedForeground": "{{ThemeMap.fg1}}",
-        "selectedBackground": "{{.Bg3}}",
-        "hoverBackground": "{{.Bg3}}"
+        "selectedBackground": "{{ThemeMap.bg3}}",
+        "hoverBackground": "{{ThemeMap.bg3}}"
       },
       "SearchField.borderColor": "{{ThemeMap.fg1}}",
       "SectionHeader.background": "{{ThemeMap.bg1}}",
@@ -196,7 +196,7 @@
       "borderInsets": "4,1,4,1"
     },
     "ProgressBar": {
-      "trackColor": "{{.Bg4}}",
+      "trackColor": "{{ThemeMap.bg4}}",
       "progressColor": "{{ThemeMap.fg1}}",
       "indeterminateStartColor": "{{ThemeMap.fg1}}",
       "indeterminateEndColor": "{{ThemeMap.bg2}}",
@@ -220,13 +220,13 @@
       "trackColor": "{{ThemeMap.bg1}}",
       "Mac": {
         "Transparent": {
-          "thumbColor": "{{.Bg4}}",
+          "thumbColor": "{{ThemeMap.bg4}}",
           "thumbBorderColor": "{{ThemeMap.bg1}}C8",
           "hoverThumbColor": "{{ThemeMap.fg2}}",
           "hoverThumbBorderColor": "{{ThemeMap.bg1}}C8",
           "hoverTrackColor": "{{ThemeMap.fg2}}5A"
         },
-        "thumbColor": "{{.Bg4}}",
+        "thumbColor": "{{ThemeMap.bg4}}",
         "thumbBorderColor": "{{ThemeMap.bg1}}C8",
         "hoverThumbColor": "{{ThemeMap.fg2}}",
         "hoverThumbBorderColor": "{{ThemeMap.bg1}}C8",
@@ -237,7 +237,7 @@
     "SearchEverywhere": {
       "Tab": {
         "selectedForeground": "{{ThemeMap.fg1}}",
-        "selectedBackground": "{{.Bg3}}"
+        "selectedBackground": "{{ThemeMap.bg3}}"
       },
       "SearchField.borderColor": "{{ThemeMap.fg1}}",
       "Advertiser": {
@@ -257,12 +257,12 @@
     "StatusBar.borderColor": "{{ThemeMap.fg1}}",
     "TabbedPane": {
       "underlineColor": "{{ThemeMap.fg1}}",
-      "disabledUnderlineColor": "{{.Bg4}}",
+      "disabledUnderlineColor": "{{ThemeMap.bg4}}",
       "contentAreaColor": "{{ThemeMap.fg1}}"
     },
     "TableHeader.cellBorder": "8,0,8,0",
     "Table": {
-      "stripeColor": "{{.Bg4}}",
+      "stripeColor": "{{ThemeMap.bg4}}",
       "lightSelectionForeground": "{{ThemeMap.fg1}}",
       "lightSelectionInactiveForeground": "{{ThemeMap.fg1}}",
       "lightSelectionBackground": "{{ThemeMap.bg2}}",
@@ -287,13 +287,13 @@
       },
       "HeaderTab": {
         "selectedBackground": "{{.InvType}}FF",
-        "selectedInactiveBackground": "{{.Bg4}}FF",
+        "selectedInactiveBackground": "{{ThemeMap.bg4}}FF",
         "hoverBackground": "{{.InvType}}FF",
-        "hoverInactiveBackground": "{{.Bg4}}FF"
+        "hoverInactiveBackground": "{{ThemeMap.bg4}}FF"
       },
       "Button": {
-        "hoverBackground": "{{.Bg3}}",
-        "selectedBackground": "{{.Bg3}}",
+        "hoverBackground": "{{ThemeMap.bg3}}",
+        "selectedBackground": "{{ThemeMap.bg3}}",
         "selectedForeground": "{{ThemeMap.fg1}}"
       }
     },
@@ -309,16 +309,16 @@
         "unmatchedForeground": "{{ThemeMap.warning2}}"
       },
       "RefLabel": {
-        "backgroundBase": "{{.Bg3}}",
+        "backgroundBase": "{{ThemeMap.bg3}}",
         "backgroundBrightness": 0.7
       },
       "FileHistory.Commit.selectedBranchBackground": "{{.Bg01}}"
     },
     "WelcomeScreen": {
-      "Projects.selectionInactiveBackground": "{{.Bg3}}",
+      "Projects.selectionInactiveBackground": "{{ThemeMap.bg3}}",
       "separatorColor": "{{ThemeMap.fg2}}"
     },
-    "Window.border": "1,1,1,1,{{.Bg3}}"
+    "Window.border": "1,1,1,1,{{ThemeMap.bg3}}"
   },
   "icons": {
     "ColorPalette": {
@@ -346,8 +346,8 @@
       "Checkbox.Focus.Thin.Default.Dark": "{{ThemeMap.fg1}}",
       "Checkbox.Focus.Thin.Selected.Dark": "{{ThemeMap.fg1}}",
       "Checkbox.Background.Disabled.Dark": "{{ThemeMap.bg1}}",
-      "Checkbox.Border.Disabled.Dark": "{{.Bg4}}",
-      "Checkbox.Foreground.Disabled.Dark": "{{.Bg4}}"
+      "Checkbox.Border.Disabled.Dark": "{{ThemeMap.bg4}}",
+      "Checkbox.Foreground.Disabled.Dark": "{{ThemeMap.bg4}}"
     }
   }
 }

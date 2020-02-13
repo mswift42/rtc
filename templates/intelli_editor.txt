@@ -70,7 +70,7 @@
     </option>
     <option name="Annotation name">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -190,7 +190,7 @@
     <option name="BREADCRUMBS_HOVERED">
       <value>
         <option name="FOREGROUND" value="{{ThemeMap.fg1}} />
-        <option name="BACKGROUND" value="{{.Bg4}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg4}}" />
       </value>
     </option>
     <option name="BREADCRUMBS_INACTIVE">
@@ -537,7 +537,7 @@
     </option>
     <option name="CSS.TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="CSS.URL">
@@ -629,7 +629,7 @@
     </option>
     <option name="Clojure Literal">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -659,7 +659,7 @@
     </option>
     <option name="Cmd.ENVIRONMENT_VARIABLE_DEFINITION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -702,7 +702,7 @@
     </option>
     <option name="DARTBUILTIN_TYPES">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -807,7 +807,7 @@
     </option>
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
@@ -880,7 +880,7 @@
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="DELETED_TEXT_ATTRIBUTES">
@@ -1137,8 +1137,8 @@
     </option>
     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
-        <option name="EFFECT_COLOR" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
+        <option name="EFFECT_COLOR" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="First symbol in list">
@@ -1171,7 +1171,7 @@
     </option>
     <option name="GHERKIN_OUTLINE_PARAMETER_SUBSTITUTION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1368,7 +1368,7 @@
     </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="IVAR">
@@ -1379,12 +1379,12 @@
     </option>
     <option name="Instance field">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="Instance property reference ID">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="Integer literal">
@@ -1421,7 +1421,7 @@
     </option>
     <option name="JADE_TAG_ID">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="JADE_TEXT">
@@ -1506,7 +1506,7 @@
     <option name="JFLEX.SECTION_SIGN">
       <value>
         <option name="FOREGROUND" value="{{ThemeMap.keyword}}" />
-        <option name="BACKGROUND" value="{{.Bg3}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg3}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -1532,13 +1532,13 @@
     </option>
     <option name="JFLEX_OPTION_BACKGROUND">
       <value>
-        <option name="BACKGROUND" value="{{.Bg3}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg3}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
     <option name="JFLEX_REGEXP_BACKGROUND">
       <value>
-        <option name="BACKGROUND" value="{{.Bg3}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg3}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1557,7 +1557,7 @@
     </option>
     <option name="JFLEX_STATE_REF">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -1613,7 +1613,7 @@
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1708,7 +1708,7 @@
     </option>
     <option name="JSP_DIRECTIVE_NAME">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1723,7 +1723,7 @@
     </option>
     <option name="KOTLIN_AUTO_CASTED_VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Bg3}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg3}}" />
         <option name="FONT_TYPE" value="3" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
@@ -1741,7 +1741,7 @@
     </option>
     <option name="KOTLIN_BUILTIN_ANNOTATION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1761,7 +1761,7 @@
     </option>
     <option name="KOTLIN_INSTANCE_PROPERTY">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="KOTLIN_KEYWORD">
@@ -1796,7 +1796,7 @@
     </option>
     <option name="KOTLIN_NAMESPACE_PROPERTY">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -1834,7 +1834,7 @@
     </option>
     <option name="KOTLIN_WRAPPED_INTO_REF">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="LABEL">
@@ -1904,7 +1904,7 @@
     </option>
     <option name="LOGCAT_DEBUG_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="LOGCAT_ERROR_OUTPUT">
@@ -1994,7 +1994,7 @@
     </option>
     <option name="LUA_LUADOC_TAG">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_COLOR" value="{{ThemeMap.fg3}}" />
         <option name="EFFECT_TYPE" value="1" />
@@ -2002,7 +2002,7 @@
     </option>
     <option name="LUA_LUADOC_VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2013,7 +2013,7 @@
     </option>
     <option name="LUA_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="LUA_STRING">
@@ -2258,7 +2258,7 @@
     </option>
     <option name="OC.DIRECTIVE">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2316,7 +2316,7 @@
     </option>
     <option name="OC.STRUCT_FIELD">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2450,7 +2450,7 @@
     </option>
     <option name="PROPERTIES.VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="PROPS.INVALID_STRING_ESCAPE">
@@ -2487,7 +2487,7 @@
     </option>
     <option name="PROPS.SECTION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -2513,7 +2513,7 @@
     </option>
     <option name="PYBUILTIN_NAME">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2566,7 +2566,7 @@
     </option>
     <option name="PY.PREDEFINED_DEFINITION">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -2688,7 +2688,7 @@
     </option>
     <option name="REGEXP.CHAR_CLASS">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="REGEXP.COMMA">
@@ -2894,7 +2894,7 @@
     </option>
     <option name="RUBY_PARAMDEF_CALL">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2910,7 +2910,7 @@
     </option>
     <option name="RUBY_SPECIFIC_CALL">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="RUBY_SYMBOL">
@@ -2941,7 +2941,7 @@
     </option>
     <option name="SASS_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="SASS_DIRECTIVE">
@@ -3022,7 +3022,7 @@
     </option>
     <option name="SOYCONSTANT_COMMENT_IDENTIFIER">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3041,7 +3041,7 @@
     </option>
     <option name="SOY.NAMESPACE_ID">
       <value>
-        <option name="EFFECT_COLOR" value="{{.Builtin}}" />
+        <option name="EFFECT_COLOR" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -3070,7 +3070,7 @@
     </option>
     <option name="SOY.TEMPLATE_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3161,7 +3161,7 @@
     </option>
     <option name="SQL_PROCEDURE">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -3285,7 +3285,7 @@
     </option>
     <option name="Scala Predefined types">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="Scala Semicolon">
@@ -3385,7 +3385,7 @@
     </option>
     <option name="TEA.BADCHARACTER">
       <value>
-        <option name="FOREGROUND" value="{{.Bg3}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg3}}" />
         <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
@@ -3397,7 +3397,7 @@
     </option>
     <option name="TEA.INVALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="{{.Bg3}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.bg3}}" />
         <option name="BACKGROUND" value="{{ThemeMap.constant}}" />
       </value>
     </option>
@@ -3420,7 +3420,7 @@
     </option>
     <option name="TEA.SCRIPTING_BACKGROUND">
       <value>
-        <option name="BACKGROUND" value="{{.Bg3}}" />
+        <option name="BACKGROUND" value="{{ThemeMap.bg3}}" />
       </value>
     </option>
     <option name="TEA.SCRIPTING_FOREGROUND">
@@ -3683,7 +3683,7 @@
     </option>
     <option name="XPATH.XPATH_NAME">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
       </value>
     </option>
     <option name="XPATH.XPATH_VARIABLE">
@@ -3768,7 +3768,7 @@
     </option>
     <option name="bemhtmlkeyword.mod">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3797,7 +3797,7 @@
     </option>
     <option name="go.identifier">
       <value>
-        <option name="FOREGROUND" value="{{.Builtin}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.builtin}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
