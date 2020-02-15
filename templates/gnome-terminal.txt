@@ -67,7 +67,7 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         # Update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
-        dset palette "['{{ThemeMap.bg1}}', '{{ThemeMap.fg2}}','{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.func}}', '{{ThemeMap.typeface}}', '{{ThemeMap.keyword}}', '{{ThemeMap.constant}}', '{{.Variable}}', '{{ThemeMap.typeface}}',  '{{ThemeMap.warning}}', '{{ThemeMap.func}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg1}}']"
+        dset palette "['{{ThemeMap.bg1}}', '{{ThemeMap.fg2}}','{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.func}}', '{{ThemeMap.typeface}}', '{{ThemeMap.keyword}}', '{{ThemeMap.constant}}', '{{ThemeMap.variable}}', '{{ThemeMap.typeface}}',  '{{ThemeMap.warning}}', '{{ThemeMap.func}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg2}}', '{{ThemeMap.fg1}}']"
         dset background-color "'{{ThemeMap.bg1}}'"
         dset foreground-color "'{{ThemeMap.fg1}}'"
         dset bold-color "'{{ThemeMap.fg1}}'"
@@ -120,7 +120,7 @@ glist_append() {
 glist_append string /apps/gnome-terminal/global/profile_list "$PROFILE_SLUG"
 
 gset string visible_name "$PROFILE_NAME"
-gset string palette "{{ThemeMap.bg1}}:{{ThemeMap.fg2}}:{{.Fg5}}:{{ThemeMap.fg3}}:{{ThemeMap.fg4}}:{{ThemeMap.func}}:{{ThemeMap.typeface}}:{{.Variable}}:{{ThemeMap.constant}}:{{ThemeMap.func}}:{{ThemeMap.keyword}}:{{ThemeMap.warning}}:{{.Variable}}:{{ThemeMap.fg4}}:{{ThemeMap.fg2}}:{{ThemeMap.fg1}}"
+gset string palette "{{ThemeMap.bg1}}:{{ThemeMap.fg2}}:{{.Fg5}}:{{ThemeMap.fg3}}:{{ThemeMap.fg4}}:{{ThemeMap.func}}:{{ThemeMap.typeface}}:{{ThemeMap.variable}}:{{ThemeMap.constant}}:{{ThemeMap.func}}:{{ThemeMap.keyword}}:{{ThemeMap.warning}}:{{ThemeMap.variable}}:{{ThemeMap.fg4}}:{{ThemeMap.fg2}}:{{ThemeMap.fg1}}"
 gset string background_color "{{ThemeMap.bg1}}"
 gset string foreground_color "{{ThemeMap.fg1}}"
 gset string bold_color "{{ThemeMap.fg1}}"

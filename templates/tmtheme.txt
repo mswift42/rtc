@@ -59,7 +59,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{{.Variable}}</string>
+				<string>{{ThemeMap.variable}}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -209,7 +209,7 @@ Created with ThemeCreator, https://github.com/mswift42/themecreator -->
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{{.Variable}}</string>
+				<string>{{ThemeMap.variable}}</string>
 			</dict>
 		</dict>
 		<dict>

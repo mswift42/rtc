@@ -28,7 +28,7 @@ let s:comment="{{ThemeMap.comment}}"
 let s:func="{{ThemeMap.func}}"
 let s:str="{{ThemeMap.string}}"
 let s:type="{{ThemeMap.typeface}}"
-let s:var="{{.Variable}}"
+let s:var="{{ThemeMap.variable}}"
 let s:warning="{{ThemeMap.warning}}"
 let s:warning2="{{ThemeMap.warning2}}"
 

@@ -222,7 +222,7 @@
     </option>
     <option name="BUILDOUT.VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -652,7 +652,7 @@
     </option>
     <option name="Cmd.ENVIRONMENT_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="3" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -689,7 +689,7 @@
     </option>
     <option name="CmdVARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="3" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -993,7 +993,7 @@
     </option>
     <option name="ECMAL4.AL4.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1042,7 +1042,7 @@
     </option>
     <option name="ECMAL4.INSTANCE_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="0" />
       </value>
@@ -1406,7 +1406,7 @@
     </option>
     <option name="JADE_FILE_PATH">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="JADE_JS_BLOCK">
@@ -1519,7 +1519,7 @@
     </option>
     <option name="JFLEX_MACROS">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -1608,7 +1608,7 @@
     </option>
     <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
@@ -1619,7 +1619,7 @@
     </option>
     <option name="JS.INSTANCE_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="JS.INVALID_STRING_ESCAPE">
@@ -1642,7 +1642,7 @@
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1772,7 +1772,7 @@
     </option>
     <option name="KOTLIN_LABEL">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
@@ -1790,7 +1790,7 @@
     </option>
     <option name="KOTLIN_MUTABLE_VARIABLE">
       <value>
-        <option name="EFFECT_COLOR" value="{{.Variable}}" />
+        <option name="EFFECT_COLOR" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1857,7 +1857,7 @@
     </option>
     <option name="LESS_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -2035,12 +2035,12 @@
     </option>
     <option name="Local value">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="Local variable">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2064,7 +2064,7 @@
     </option>
     <option name="MAKO.CONTROL_STRUCTURE_ID">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -2264,14 +2264,14 @@
     </option>
     <option name="OC.EXTERN_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="3" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
     <option name="OC.GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -2424,7 +2424,7 @@
     </option>
     <option name="PHP_VAR">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="PROPERTIES.INVALID_STRING_ESCAPE">
@@ -2480,7 +2480,7 @@
     </option>
     <option name="PROPS.PROFILE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -2639,7 +2639,7 @@
     </option>
     <option name="QL_ID_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="QL_KEYWORD">
@@ -2784,7 +2784,7 @@
     </option>
     <option name="REST.REF.NAME">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="REST.SECTION.HEADER">
@@ -2815,17 +2815,17 @@
     </option>
     <option name="RUBY_CVAR">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="RUBY_LVAR">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="RUBY_LOCAL_VAR_ID">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -2862,7 +2862,7 @@
     </option>
     <option name="RUBY_IVAR">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="RUBY_KEYWORD">
@@ -2952,7 +2952,7 @@
     </option>
     <option name="SASS_MIXIN">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="SASS_NUMBER">
@@ -2970,7 +2970,7 @@
     </option>
     <option name="SASS_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="SCOPE_KEY_All">
@@ -3118,7 +3118,7 @@
     </option>
     <option name="SQL_COLUMN">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -3146,7 +3146,7 @@
     </option>
     <option name="SQL_LOCAL_ALIAS">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="SQL_NUMBER">
@@ -3167,7 +3167,7 @@
     </option>
     <option name="SQL_SCHEMA">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="SQL_STRING">
@@ -3186,7 +3186,7 @@
     </option>
     <option name="SQL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="STATIC_FIELD_ATTRIBUTES">
@@ -3210,7 +3210,7 @@
     </option>
     <option name="Scala Annotation name">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -3254,7 +3254,7 @@
     </option>
     <option name="Scala Local lazy val/var">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="Scala Method declaration">
@@ -3300,13 +3300,13 @@
     </option>
     <option name="Scala Template lazy val/var">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="Scala Template val">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -3443,7 +3443,7 @@
     </option>
     <option name="TEMPLATE_VARIABLE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -3530,12 +3530,12 @@
     </option>
     <option name="Template lazy val/var">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="Template val">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="Template var">
@@ -3630,7 +3630,7 @@
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="XML_COMMENT">
@@ -3688,7 +3688,7 @@
     </option>
     <option name="XPATH.XPATH_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
       </value>
     </option>
     <option name="YAML_COMMENT">
@@ -3742,7 +3742,7 @@
     </option>
     <option name="bemhtml.bem.value">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
@@ -3834,7 +3834,7 @@
     </option>
     <option name="govariable">
       <value>
-        <option name="FOREGROUND" value="{{.Variable}}" />
+        <option name="FOREGROUND" value="{{ThemeMap.variable}}" />
         <option name="EFFECT_TYPE" value="-1" />
       </value>
     </option>
