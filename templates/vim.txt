@@ -60,7 +60,7 @@ exe 'hi DiffDelete guibg='s:bg2
 exe 'hi DiffChange  guibg=#151b3c guifg=#fafafa'
 exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
 {% endif %}
-{{^hasdarkbg}}
+{% if ThemeMap.dark_bg is not true %}
 exe 'hi DiffAdd guifg=#000000 guibg=#bef6dc gui=bold'
 exe 'hi DiffDelete guifg='s:bg2  
 exe 'hi DiffChange  guibg=#5b76ef guifg=#ffffff'
