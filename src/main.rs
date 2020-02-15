@@ -1,31 +1,23 @@
 mod common;
+mod blanktheme;
 
-extern crate approx;
+extern crate json;
 extern crate pest;
 #[macro_use]
 extern crate pest_derive;
+extern crate serde_json;
+extern crate serde;
 
 use common::ThemeColor;
 use std::str::FromStr;
 use pest::Parser;
 use std::collections::HashMap;
 use std::fs;
+use crate::blanktheme::from_json;
 
-#[derive(Parser)]
-#[grammar = "blanktheme.pest"]
-pub struct BlankParser;
 
 fn main() {
-    println!("Hello, world!");
-    let a = ThemeColor::from_str("#ece3db");
-    println!("{:?}", a.unwrap().to_hex());
-    let b = ThemeColor::from_str("#fff");
-    println!("{:?}", b.unwrap().to_hex());
-    let c = ThemeColor::from_str("");
-    println!("{}", c.err().unwrap());
-    let f = fs::read_to_string("src/themefiles/blank.theme")
-        .expect("could not read file.");
-    let file = BlankParser::parse(Rule::file, &f)
-        .expect("unsuccesful parse")
-        .next().unwrap();
+    let f = fs::read_to_string("src/themefiles/blanktheme.json").unwrap();
+//    let fj = from_json(&f);
+//    println!("{:?}", fj);
 }

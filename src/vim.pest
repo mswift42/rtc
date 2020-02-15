@@ -16,7 +16,10 @@ fg = { "guifg" }
 
 cterm = _{ "ctermfg=" | "ctermbg="~ ANY ~ SPACE_SEPARATOR}
 
-facedef = { ( "exe hi" | "hi")  ~ SPACE_SEPARATOR ~ facename ~ SPACE_SEPARATOR ~ fg | bg }
+facedef = {
+    ( "exe hi" | "hi")  ~ SPACE_SEPARATOR ~
+    facename ~ SPACE_SEPARATOR ~ fg | bg
+}
 
 comment = _{ (SOI | NEWLINE) ~ "\"" ~ ANY }
 
