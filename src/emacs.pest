@@ -1,0 +1,3 @@
+char = { ASCII_ALPHANUMERIC | "." | "_" }
+
+colorvalue = { "#" ~ ASCII_HEX_DIGIT+ }
