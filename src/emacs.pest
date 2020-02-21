@@ -1,3 +1,11 @@
 char = { ASCII_ALPHANUMERIC | "." | "_" }
 
 colorvalue = { "#" ~ ASCII_HEX_DIGIT+ }
+
+bg = { ":foreground" }
+
+fg = { ":background" }
+
+themenamedec = { "(" ~ "deftheme" ~ WHITE_SPACE ~ name ~ ")"}
+
+name = { char+ }
