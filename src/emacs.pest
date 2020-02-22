@@ -22,8 +22,30 @@ background = { ANY+ ~ "default" ~ ANY+ ~ bg ~ colorvar}
 
 faceset = { ANY+ ~ facename ~ ANY+ ~ fg ~ colorvar}
 
-facename = { char+ }
-
 
 colorvar = { char+ }
+
+string = { "font-lock-string-face" }
+keyword = { "font-lock-keyword-face" }
+builtin = { "font-lock-builtin-face" }
+typeface = { "font-lock-type-face" }
+variable = { "font-lock-variable-name-face" }
+func = { "font-lock-function-name-face" }
+constant = { "font-lock-constant-face" }
+commentface = { "font-lock-comment-face" }
+warning = { "error" }
+warning2 = { "warning" }
+
+facename = {
+    string
+    | keyword
+    | builtin
+    | typeface
+    | variable
+    | func
+    | constant
+    | commentface
+    | warning
+    | warning2
+}
 
