@@ -8,17 +8,22 @@ char = { ASCII_ALPHANUMERIC | "_" | "-" }
 
 colorvalue = { "#" ~ ASCII_HEX_DIGIT+ }
 
-bg = { ":foreground" }
+fg = { ":foreground" }
 
-fg = { ":background" }
+bg = { ":background" }
 
-themenamedec = { "(" ~ "deftheme" ~ WHITE_SPACE ~ name ~ ")"}
+themenamedec = { "(" ~ "deftheme" ~ name ~ ")"}
 
 name = { char+ }
 
-foreground = { ANY+ ~ "default" ~ ANY ~ fg ~ WHITE_SPACE ~ colorvar}
+foreground = { ANY+ ~ "default" ~ ANY+ ~ fg ~ colorvar}
 
-background = { ANY+ ~ "default" ~ ANY ~ bg ~ WHITE_SPACE ~ colorvar}
+background = { ANY+ ~ "default" ~ ANY+ ~ bg ~ colorvar}
+
+faceset = { ANY+ ~ facename ~ ANY+ ~ fg ~ colorvar}
+
+facename = { char+ }
+
 
 colorvar = { char+ }
 
