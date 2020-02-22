@@ -1,8 +1,10 @@
 ws = _{ " " }
 
-COMMENT = _{ "//" ~ ANY }
+comment = _{ ";;" ~ ANY }
 
-char = { ASCII_ALPHANUMERIC | "." | "_" }
+comma = _{ "," }
+
+char = { ASCII_ALPHANUMERIC | "_" | "-" }
 
 colorvalue = { "#" ~ ASCII_HEX_DIGIT+ }
 
@@ -14,8 +16,9 @@ themenamedec = { "(" ~ "deftheme" ~ WHITE_SPACE ~ name ~ ")"}
 
 name = { char+ }
 
-foreground = { ANY+ ~ "default" ~ ANY ~ fg ~ WHITE_SPACE ~ fgcol}
+foreground = { ANY+ ~ "default" ~ ANY ~ fg ~ WHITE_SPACE ~ colorvar}
 
-background = { ANY+ ~ "default" ~ ANY ~ bg ~ WHITE_SPACE ~ bgcol}
+background = { ANY+ ~ "default" ~ ANY ~ bg ~ WHITE_SPACE ~ colorvar}
 
-fgcol = {
+colorvar = { char+ }
+
