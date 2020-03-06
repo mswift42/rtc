@@ -49,3 +49,10 @@ facename = {
     | warning2
 }
 
+file = {
+    SOI ~
+    themenamedec ~
+    faceset ~
+    EOI
+}
+
