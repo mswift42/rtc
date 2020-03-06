@@ -23,6 +23,12 @@ facedef = {
 
 comment = _{ (SOI | NEWLINE) ~ "\"" ~ ANY }
 
+file = {
+    SOI ~
+    vardef ~
+    facedef ~
+    EOI
+}
 
 
 
